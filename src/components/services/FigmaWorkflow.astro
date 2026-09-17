@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "User Empathy & Wireframe Architecture",
+    icon: "🎯",
+    desc: "We analyze your audience, define core user goals, and establish site information hierarchy using proven Google UX research frameworks.",
+    deliverable: "User Flow & Site Architecture Map"
+  },
+  {
+    step: "02",
+    title: "Low-Fidelity Layout Prototypes",
+    icon: "✏️",
+    desc: "Drafting rapid wireframe concepts to validate section layout structures, content positioning, and conversion CTA placements before visual design.",
+    deliverable: "Low-Fi Figma Wireframe Deck"
+  },
+  {
+    step: "03",
+    title: "High-Fidelity UI & Component System",
+    icon: "🎨",
+    desc: "Applying pixel-perfect visual styling, custom typography, brand color tokens, and Auto-Layout 5.0 to create scalable Figma design components.",
+    deliverable: "High-Fi Figma Layout & UI Kit"
+  },
+  {
+    step: "04",
+    title: "Usability Audit & Developer Handoff",
+    icon: "🚀",
+    desc: "Conducting WCAG AA contrast accessibility checks, testing interactive prototype flows, and organizing clean layer specs for web developers.",
+    deliverable: "Interactive Prototype & Spec Handoff"
+  }
+];
+---
+
+<section id="workflow" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">
+        THE DESIGN PROCESS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Google UX Certified <span class="text-gradient">4-Step Design Methodology</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        A structured, iterative workflow engineered to turn user insights into high-converting digital products.
+      </p>
+    </div>
+
+    <!-- 4-Step Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((item) => (
+        <div class="group relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          
+          <div>
+            <!-- Header Row: Step Number & Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display text-3xl font-extrabold text-brand-500/30 group-hover:text-brand-500 transition-colors">
+                {item.step}
+              </span>
+              <span class="text-2xl p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800">
+                {item.icon}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Bottom Deliverable Tag -->
+          <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-1">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400">Milestone Deliverable:</span>
+            <span class="text-xs font-bold text-brand-600 dark:text-brand-400">{item.deliverable}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
