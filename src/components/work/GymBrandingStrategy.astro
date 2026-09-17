@@ -1,0 +1,86 @@
+---
+const strategyPhases = [
+  {
+    phase: "01",
+    title: "High-Contrast Visual Identity",
+    icon: "🎨",
+    desc: "Established a bold, athletic visual identity using high-contrast black backgrounds (#111111) paired with vibrant gold accents (#FF9D42) and heavy display typography.",
+    deliverable: "Brand Palette & Font Rules"
+  },
+  {
+    phase: "02",
+    title: "Curiosity-Driven Hook Slide",
+    icon: "🔥",
+    desc: "Engineered Slide 1 with high-curiosity headlines (e.g. '5 Deadlift Mistakes Ruining Your Gains') to stop the scroll and compel immediate swipe interaction.",
+    deliverable: "Hook Copy & Headline Layout"
+  },
+  {
+    phase: "03",
+    title: "Seamless Overflow Slide Flow",
+    icon: "📱",
+    desc: "Created continuous visual elements that span across slide boundaries, encouraging users to swipe through all 5 slides to complete the visual sequence.",
+    deliverable: "Multi-Slide Seamless Flow"
+  },
+  {
+    phase: "04",
+    title: "High-Conversion CTA Ending",
+    icon: "🚀",
+    desc: "Concluded Slide 5 with clear, single-action prompts: 'Save this post for your next leg day' and 'Claim a free 7-day gym pass link in bio'.",
+    deliverable: "Action-Driven Final Slide"
+  }
+];
+---
+
+<section id="strategy" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-3">
+        CREATIVE STRATEGY & CAROUSEL FLOW
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Engineering Carousels for <span class="text-gradient">Maximum Swipe Completion</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Every slide is structured with visual incentives that guide the viewer from the hook headline down to the final call to action.
+      </p>
+    </div>
+
+    <!-- 4-Phase Strategy Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {strategyPhases.map((item) => (
+        <div class="group relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-amber-500/50 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          
+          <div>
+            <!-- Header Row: Phase Number & Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display text-3xl font-extrabold text-amber-500/30 group-hover:text-amber-500 transition-colors">
+                {item.phase}
+              </span>
+              <span class="text-2xl p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800">
+                {item.icon}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Bottom Deliverable Tag -->
+          <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-1">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400">Strategy Output:</span>
+            <span class="text-xs font-bold text-amber-600 dark:text-amber-400">{item.deliverable}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
