@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Discovery & Strategy",
+    icon: "🔍",
+    description: "We clarify your brand goals, target audience, and key project requirements. We outline wireframes and establish site architecture.",
+    deliverable: "Project Roadmap & Wireframes"
+  },
+  {
+    step: "02",
+    title: "Figma UI/UX Design",
+    icon: "🎨",
+    description: "I craft high-fidelity desktop and mobile UI screens in Figma, building a scalable design system backed by Google UX principles.",
+    deliverable: "Figma UI Layout & Prototypes"
+  },
+  {
+    step: "03",
+    title: "Webflow Build & Tuning",
+    icon: "⚡",
+    description: "I develop your live Webflow website with clean class naming, fluid responsiveness, custom animations, and on-page SEO.",
+    deliverable: "Responsive Webflow Build"
+  },
+  {
+    step: "04",
+    title: "QA & Domain Launch",
+    icon: "🚀",
+    description: "We conduct thorough cross-browser testing, Core Web Vitals audit, and seamless domain launch with video handoff instructions.",
+    deliverable: "Live Website & Handoff Video"
+  }
+];
+---
+
+<section id="process" class="py-20 md:py-28 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">
+        THE PROCESS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-tight mb-4">
+        A Streamlined 4-Step Process <span class="text-gradient">From Concept to Launch</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-400 dark:text-zinc-400 light:text-zinc-600">
+        A transparent, collaborative workflow designed to deliver pixel-perfect designs on time, every time.
+      </p>
+    </div>
+
+    <!-- 4-Step Horizontal Timeline Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      
+      {steps.map((item, index) => (
+        <div class="group relative p-6 rounded-3xl bg-zinc-900/60 dark:bg-zinc-900/60 light:bg-white border border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 hover:border-brand-500/50 shadow-lg hover:shadow-xl transition-all duration-300">
+          
+          <!-- Step Number Badge -->
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-display text-3xl font-extrabold text-brand-500/30 group-hover:text-brand-500 transition-colors">
+              {item.step}
+            </span>
+            <span class="text-2xl p-2 rounded-xl bg-zinc-800/50 dark:bg-zinc-800/50 light:bg-zinc-100">
+              {item.icon}
+            </span>
+          </div>
+
+          <!-- Step Title & Description -->
+          <h3 class="font-display text-lg font-bold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 mb-2 group-hover:text-brand-400 transition-colors">
+            {item.title}
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-400 dark:text-zinc-400 light:text-zinc-600 leading-relaxed mb-6">
+            {item.description}
+          </p>
+
+          <!-- Key Deliverable Pill -->
+          <div class="pt-4 border-t border-zinc-800/60 dark:border-zinc-800/60 light:border-zinc-100 flex items-center justify-between text-xs">
+            <span class="text-zinc-400 dark:text-zinc-400 light:text-zinc-500 font-medium">Deliverable:</span>
+            <span class="font-bold text-brand-400">{item.deliverable}</span>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>

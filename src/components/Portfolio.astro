@@ -1,0 +1,204 @@
+---
+const caseStudies = [
+  {
+    id: "saas-video",
+    category: "ui-ux",
+    categoryLabel: "Web UI/UX Design",
+    title: "Create Video Instantly — SaaS Landing Page UI",
+    client: "AI Video Tech Startup",
+    description: "Designed a modern, dark-mode landing page UI in Figma for an AI-powered video editing platform. Focused on hero section value proposition, interactive feature previews, and a streamlined CTA funnel.",
+    deliverables: ["Figma UI Layout", "Mobile Responsive Frames", "Feature Card System"],
+    metric: "+35% Conversion Intent",
+    imageBg: "from-purple-900/40 via-zinc-900 to-zinc-900",
+    mockupType: "SaaS Dashboard UI",
+    tags: ["Figma", "UI/UX", "SaaS"]
+  },
+  {
+    id: "solar-energy",
+    category: "webflow",
+    categoryLabel: "Webflow Development",
+    title: "Get the Sun to Power Your Home — Solar Web UI & Webflow",
+    client: "GreenEnergy Solutions",
+    description: "Crafted a clean, eco-friendly website UI and converted it into a responsive Webflow site. Integrated interactive cost calculators, service tier breakdowns, and a seamless quote request flow.",
+    deliverables: ["Figma Design System", "Custom Webflow Build", "Responsive Breakpoints"],
+    metric: "100% Mobile Responsive",
+    imageBg: "from-amber-900/40 via-zinc-900 to-zinc-900",
+    mockupType: "Solar Landing Page UI",
+    tags: ["Webflow", "Clean Energy", "Responsive"]
+  },
+  {
+    id: "fitness-gym",
+    category: "social",
+    categoryLabel: "Social Media Branding",
+    title: "High-Impact Gym Social Media Carousels & Brand Assets",
+    client: "Apex Fitness Club",
+    description: "Created a high-contrast Black & Yellow social media branding campaign for a premium fitness club. Designed workout tip carousels, membership promo graphics, and outdoor billboard visual mockups.",
+    deliverables: ["Instagram Carousels", "Ad Creatives", "Outdoor Billboard Visuals"],
+    metric: "50k+ Impression Reach",
+    imageBg: "from-yellow-900/40 via-zinc-900 to-zinc-900",
+    mockupType: "Social Campaign Branding",
+    tags: ["Figma", "Instagram Carousels", "Branding"]
+  }
+];
+---
+
+<section id="work" class="py-20 md:py-28 relative bg-zinc-950/60 dark:bg-zinc-950/60 light:bg-zinc-100/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">
+        FEATURED PORTFOLIO
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-tight mb-4">
+        Selected UI/UX Case Studies & <span class="text-gradient">Brand Campaigns</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-400 dark:text-zinc-400 light:text-zinc-600">
+        Explore recent projects spanning SaaS web interfaces, custom Webflow development, and social media brand campaigns.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16" id="portfolio-filters">
+      <button
+        data-filter="all"
+        class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-brand-500 text-white shadow-lg shadow-brand-500/25"
+      >
+        All Projects
+      </button>
+      <button
+        data-filter="ui-ux"
+        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-white text-zinc-400 dark:text-zinc-400 light:text-zinc-600 border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 hover:text-zinc-100"
+      >
+        Web UI/UX Design
+      </button>
+      <button
+        data-filter="webflow"
+        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-white text-zinc-400 dark:text-zinc-400 light:text-zinc-600 border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 hover:text-zinc-100"
+      >
+        Webflow Development
+      </button>
+      <button
+        data-filter="social"
+        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-white text-zinc-400 dark:text-zinc-400 light:text-zinc-600 border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 hover:text-zinc-100"
+      >
+        Social Media Branding
+      </button>
+    </div>
+
+    <!-- Case Studies Stack -->
+    <div class="space-y-12" id="portfolio-items">
+      {caseStudies.map((project, index) => (
+        <div
+          data-category={project.category}
+          class={`portfolio-card group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8 lg:p-10 rounded-3xl bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-white border border-zinc-800/90 dark:border-zinc-800/90 light:border-zinc-200 hover:border-brand-500/40 shadow-xl transition-all duration-500`}
+        >
+          <!-- Mockup Visual Display Column -->
+          <div class={`lg:col-span-6 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+            <div class={`relative w-full h-[280px] sm:h-[340px] rounded-2xl bg-gradient-to-br ${project.imageBg} border border-white/10 p-6 flex flex-col justify-between overflow-hidden shadow-2xl`}>
+              
+              <!-- Top Mockup Header Bar -->
+              <div class="flex items-center justify-between z-10">
+                <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-[11px] font-semibold text-zinc-300">
+                  <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                  {project.categoryLabel}
+                </div>
+                <span class="px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 text-[11px] font-bold border border-brand-500/30">
+                  {project.metric}
+                </span>
+              </div>
+
+              <!-- Stylized Device Frame Graphic Center -->
+              <div class="my-auto z-10 flex flex-col items-center text-center p-6 rounded-xl bg-black/50 backdrop-blur-md border border-white/10 shadow-xl">
+                <span class="text-xs uppercase tracking-widest text-zinc-400 font-bold mb-1">{project.client}</span>
+                <span class="font-display text-lg sm:text-xl font-extrabold text-white">{project.mockupType}</span>
+                <span class="mt-2 text-xs text-brand-400 font-semibold">Figma High-Fidelity Design</span>
+              </div>
+
+              <!-- Bottom Tags -->
+              <div class="flex flex-wrap gap-2 z-10">
+                {project.tags.map((tag) => (
+                  <span class="px-2.5 py-0.5 rounded-md text-[10px] font-semibold bg-white/10 text-zinc-200">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project Copy Column -->
+          <div class={`lg:col-span-6 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'} flex flex-col items-start text-left`}>
+            
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-400 mb-2">
+              {project.categoryLabel}
+            </span>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-tight mb-4 group-hover:text-brand-400 transition-colors">
+              {project.title}
+            </h3>
+
+            <p class="text-sm sm:text-base text-zinc-400 dark:text-zinc-400 light:text-zinc-600 leading-relaxed mb-6">
+              {project.description}
+            </p>
+
+            <!-- Deliverables Pills -->
+            <div class="mb-8 w-full">
+              <p class="text-xs font-bold uppercase tracking-wider text-zinc-300 dark:text-zinc-300 light:text-zinc-700 mb-2">
+                Deliverables Included:
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {project.deliverables.map((item) => (
+                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-zinc-800/80 dark:bg-zinc-800/80 light:bg-zinc-100 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 border border-zinc-700/50 dark:border-zinc-700/50 light:border-zinc-200">
+                    ✓ {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-zinc-800 dark:bg-zinc-800 light:bg-zinc-900 hover:bg-brand-500 transition-all duration-300 shadow-md"
+            >
+              Request Similar Design ↗
+            </a>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Filter Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('#portfolio-filters .filter-btn');
+    const cards = document.querySelectorAll('#portfolio-items .portfolio-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Toggle active button style
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-brand-500', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+          b.classList.add('bg-zinc-900/80', 'text-zinc-400');
+        });
+        btn.classList.add('bg-brand-500', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+        btn.classList.remove('bg-zinc-900/80', 'text-zinc-400');
+
+        // Filter cards
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,132 @@
+---
+const services = [
+  {
+    id: "ui-ux",
+    badge: "UI/UX & Web Design",
+    title: "Custom Figma Web UI/UX & Landing Pages",
+    description: "Transform your product vision into clean, user-friendly digital layouts. I design responsive landing pages, SaaS web app interfaces, and Figma design systems tailored to maximize visitor conversion.",
+    deliverables: [
+      "High-Fidelity Figma Web & Mobile Layouts",
+      "Interactive Figma Prototypes & User Flows",
+      "Conversion-Focused Landing Page Structures",
+      "Design Systems & Reusable UI Component Libraries"
+    ],
+    tags: ["Figma", "Wireframing", "Prototyping", "Google UX"],
+    icon: "🖥️",
+    accent: "from-brand-500/20 to-amber-500/10"
+  },
+  {
+    id: "webflow",
+    badge: "Webflow Development",
+    title: "Pixel-Perfect Figma to Webflow Conversion",
+    description: "Bring your Figma designs to life with custom Webflow development. I build lightning-fast, fully responsive, SEO-optimized Webflow websites using clean Client-First class structures for effortless client editing.",
+    deliverables: [
+      "Custom Figma to Webflow Migration",
+      "Responsive Mobile & Tablet Breakpoints",
+      "Clean Client-First Class Naming Architecture",
+      "Webflow CMS Setup & On-Page SEO Optimization"
+    ],
+    tags: ["Webflow", "Client-First", "HTML5 / CSS", "SEO"],
+    icon: "⚡",
+    accent: "from-blue-500/20 to-cyan-500/10"
+  },
+  {
+    id: "social-branding",
+    badge: "Graphic & Brand Design",
+    title: "Social Media Graphics & Visual Brand Assets",
+    description: "Elevate your social media presence with eye-catching, brand-aligned graphics. From high-engagement Instagram carousels to ad banners and brand identity guides, I create visuals that capture attention.",
+    deliverables: [
+      "High-Engagement Instagram Post & Carousel Designs",
+      "Promotional Ad Banners & Social Media Creatives",
+      "LinkedIn Headers & Personal Branding Assets",
+      "Logo & Comprehensive Brand Style Guides"
+    ],
+    tags: ["Figma", "Photoshop", "Illustrator", "Canva"],
+    icon: "📱",
+    accent: "from-purple-500/20 to-pink-500/10"
+  }
+];
+---
+
+<section id="services" class="py-20 md:py-28 relative bg-zinc-950/60 dark:bg-zinc-950/60 light:bg-zinc-100/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">
+        MY SPECIALIZATIONS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-tight mb-4">
+        End-to-End Design & Development <span class="text-gradient">Solutions Built for Growth</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-400 dark:text-zinc-400 light:text-zinc-600">
+        Combining Google UX research, Figma design systems, and responsive Webflow development to create high-impact digital experiences.
+      </p>
+    </div>
+
+    <!-- Services Cards 3-Column Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {services.map((item) => (
+        <div class="group relative flex flex-col justify-between p-8 rounded-3xl bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-white border border-zinc-800/90 dark:border-zinc-800/90 light:border-zinc-200 hover:border-brand-500/40 shadow-xl hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1.5 transition-all duration-300">
+          
+          <!-- Top Background Accent Glow -->
+          <div class={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${item.accent} rounded-tr-3xl rounded-bl-full pointer-events-none transition-opacity duration-300 group-hover:opacity-100`}></div>
+
+          <div>
+            <!-- Header Row -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                {item.badge}
+              </span>
+              <span class="text-3xl p-2 rounded-2xl bg-zinc-800/50 dark:bg-zinc-800/50 light:bg-zinc-100">
+                {item.icon}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-xl font-bold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 mb-3 group-hover:text-brand-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-sm text-zinc-400 dark:text-zinc-400 light:text-zinc-600 leading-relaxed mb-6">
+              {item.description}
+            </p>
+
+            <!-- Deliverables Bullet Points -->
+            <div class="space-y-2.5 mb-8">
+              <p class="text-xs font-bold uppercase tracking-wider text-zinc-300 dark:text-zinc-300 light:text-zinc-700">
+                Key Deliverables:
+              </p>
+              {item.deliverables.map((deliv) => (
+                <div class="flex items-start gap-2.5 text-xs text-zinc-300 dark:text-zinc-300 light:text-zinc-700">
+                  <span class="text-brand-400 font-bold mt-0.5">✦</span>
+                  <span>{deliv}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Bottom Tool Tags & Action Link -->
+          <div class="pt-6 border-t border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-100 flex flex-col gap-4">
+            <div class="flex flex-wrap gap-2">
+              {item.tags.map((tag) => (
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-zinc-800/60 dark:bg-zinc-800/60 light:bg-zinc-100 text-zinc-400 dark:text-zinc-400 light:text-zinc-600">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 text-sm font-bold text-brand-400 hover:text-brand-300 group-hover:translate-x-1 transition-all duration-300 pt-1"
+            >
+              Get Started With {item.badge}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

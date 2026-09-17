@@ -1,0 +1,111 @@
+---
+const faqs = [
+  {
+    q: "What design tools do you use for web UI/UX projects?",
+    a: "I primarily use Figma for high-fidelity UI/UX design, interactive prototyping, wireframing, and building reusable design systems. For graphic design and marketing assets, I use Figma, Adobe Photoshop, Illustrator, and Canva."
+  },
+  {
+    q: "Can you convert my existing Figma designs into a live Webflow website?",
+    a: "Yes! I specialize in clean, manual Figma-to-Webflow development using Client-First class naming rules. I ensure your live site is 100% responsive, fast-loading, SEO-ready, and easy for you to manage."
+  },
+  {
+    q: "How does your Google UX Certification benefit my website project?",
+    a: "Being Google UX Certified means I don't just make visually pleasing designs; I structure layout flows based on user psychology, accessibility standards, and proven conversion principles to help turn website visitors into paying clients."
+  },
+  {
+    q: "What is your typical turnaround time for a landing page UI?",
+    a: "Most custom Figma landing page designs take 3 to 5 business days, including wireframing, desktop + mobile responsive views, and revisions."
+  }
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<!-- Embed FAQ Schema -->
+<script type="application/ld+json" set:html={faqSchema}></script>
+
+<section id="faq" class="py-20 md:py-28 relative bg-zinc-950/60 dark:bg-zinc-950/60 light:bg-zinc-100/50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">
+        GOT QUESTIONS?
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-tight mb-4">
+        Frequently Asked <span class="text-gradient">Questions</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-400 dark:text-zinc-400 light:text-zinc-600">
+        Everything you need to know about working together, design tools, and project timelines.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4" id="faq-accordion">
+      {faqs.map((item, index) => (
+        <div class="faq-item rounded-2xl bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-white border border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 overflow-hidden transition-all duration-300">
+          
+          <button
+            class="faq-trigger w-full p-6 flex items-center justify-between text-left focus:outline-none group"
+            aria-expanded="false"
+          >
+            <span class="font-display text-lg font-bold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 group-hover:text-brand-400 transition-colors pr-4">
+              {item.q}
+            </span>
+            <div class="w-8 h-8 rounded-full bg-zinc-800/60 dark:bg-zinc-800/60 light:bg-zinc-100 flex items-center justify-center text-zinc-400 group-hover:text-brand-400 transition-all transform duration-300 faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+          </button>
+
+          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 dark:text-zinc-400 light:text-zinc-600 leading-relaxed border-t border-zinc-800/40 dark:border-zinc-800/40 light:border-zinc-100 pt-4">
+            {item.a}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Accordion Toggle Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('#faq-accordion .faq-item');
+
+    items.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = content.classList.contains('hidden');
+
+        // Close all other items
+        items.forEach(otherItem => {
+          otherItem.querySelector('.faq-content').classList.add('hidden');
+          otherItem.querySelector('.faq-icon').classList.remove('rotate-180', 'text-brand-400');
+          otherItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180', 'text-brand-400');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+</script>

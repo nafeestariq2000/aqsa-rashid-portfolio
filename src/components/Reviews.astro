@@ -1,0 +1,118 @@
+---
+const testimonials = [
+  {
+    quote: "Aqsa is amazing! Really has integrity, honesty, and motivation to please her clients. I am a repeat customer, never disappointed! Thank you for your hard work!",
+    name: "Patricia B.",
+    location: "United States",
+    flag: "🇺🇸",
+    tag: "Repeat Client",
+    project: "Logo & Brand Identity"
+  },
+  {
+    quote: "Great service, communication and delivery, beyond my expectations and highly recommend.",
+    name: "Stareena",
+    location: "United States",
+    flag: "🇺🇸",
+    tag: "Webflow Project",
+    project: "Custom Webflow Build"
+  },
+  {
+    quote: "Always very polite, professional, reliable and delivers high quality and exceptional work.",
+    name: "D. Bennett",
+    location: "United States",
+    flag: "🇺🇸",
+    tag: "4x Repeat Client",
+    project: "Design & Graphic Assets"
+  },
+  {
+    quote: "The designer was quick, prompt, and very good at listening to directions. They nailed the task, love the design. I highly recommend.",
+    name: "Stock Your Home",
+    location: "United States",
+    flag: "🇺🇸",
+    tag: "Corporate Brand",
+    project: "Logo & Brand Identity"
+  },
+  {
+    quote: "This is the second time I work with Aqsa and as in the previous time, I’m very happy and satisfied with her work! 100% recommendable.",
+    name: "Karlabs",
+    location: "Mexico",
+    flag: "🇲🇽",
+    tag: "Repeat Client",
+    project: "Custom Graphic Design"
+  },
+  {
+    quote: "We are more than thrilled with the result and we find the collaboration with Aqsa very positive. We would highly recommend her at any time.",
+    name: "Tobol B.",
+    location: "Germany",
+    flag: "🇩🇪",
+    tag: "Repeat Client",
+    project: "Invitation & Event Design"
+  }
+];
+---
+
+<section id="reviews" class="py-20 md:py-28 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">
+        CLIENT TESTIMONIALS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-tight mb-4">
+        Trusted by Founders, Brands & <span class="text-gradient">Agencies Worldwide</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-400 dark:text-zinc-400 light:text-zinc-600">
+        Over 51+ completed international orders with a 5.0 ★★★★★ rating across Fiverr and direct client contracts.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((item) => (
+        <div class="relative p-8 rounded-3xl bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-white border border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 shadow-xl flex flex-col justify-between hover:border-brand-500/40 transition-all duration-300">
+          
+          <div>
+            <!-- Stars & Watermark Quote -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-1 text-amber-400 text-lg">
+                ★★★★★
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                {item.tag}
+              </span>
+            </div>
+
+            <!-- Quote Text -->
+            <p class="text-sm text-zinc-300 dark:text-zinc-300 light:text-zinc-700 leading-relaxed italic mb-8">
+              "{item.quote}"
+            </p>
+          </div>
+
+          <!-- Client Footer Info -->
+          <div class="pt-6 border-t border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-100 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-amber-500 flex items-center justify-center text-white font-bold text-sm">
+                {item.name.charAt(0)}
+              </div>
+              <div>
+                <p class="text-sm font-bold text-zinc-100 dark:text-zinc-100 light:text-zinc-900">
+                  {item.name}
+                </p>
+                <p class="text-xs text-zinc-400 dark:text-zinc-400 light:text-zinc-500">
+                  {item.flag} {item.location}
+                </p>
+              </div>
+            </div>
+            
+            <span class="text-[11px] font-medium text-zinc-400 dark:text-zinc-400 light:text-zinc-500">
+              {item.project}
+            </span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
