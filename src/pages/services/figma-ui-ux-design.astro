@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import FigmaHero from '../../components/services/FigmaHero.astro';
+import FigmaDeliverables from '../../components/services/FigmaDeliverables.astro';
 import Footer from '../../components/Footer.astro';
 
 const breadcrumbSchema = JSON.stringify({
@@ -42,6 +43,9 @@ const breadcrumbSchema = JSON.stringify({
   <main class="flex-grow">
     <!-- Section 1: Hero Section -->
     <FigmaHero />
+
+    <!-- Section 2: Comprehensive Deliverables Grid -->
+    <FigmaDeliverables />
   </main>
 
   <Footer />
