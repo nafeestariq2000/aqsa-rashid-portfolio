@@ -1,0 +1,53 @@
+---
+const stats = [
+  { value: "5+ Years", label: "UX/UI Experience", desc: "Delivering digital designs since 2021" },
+  { value: "51+ Orders", label: "Global Deliveries", desc: "US, Germany, Mexico, UK & UAE" },
+  { value: "5.0 ★★★★★", label: "Client Rating", desc: "42+ verified client reviews" },
+  { value: "100% Clean", label: "Webflow Handoff", desc: "Client-first responsive code" },
+];
+
+const tools = [
+  "Figma UI/UX",
+  "Webflow Development",
+  "Google UX Framework",
+  "Adobe Illustrator",
+  "Adobe Photoshop",
+  "HTML5 / CSS3",
+  "Design Systems",
+];
+---
+
+<section class="border-y border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 bg-zinc-900/40 dark:bg-zinc-900/40 light:bg-zinc-100/60 py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Micro Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-10">
+      {stats.map((item) => (
+        <div class="flex flex-col items-start p-4 rounded-2xl bg-zinc-900/60 dark:bg-zinc-900/60 light:bg-white border border-white/5 dark:border-white/5 light:border-zinc-200/80">
+          <span class="font-display text-2xl sm:text-3xl font-extrabold text-gradient mb-1">
+            {item.value}
+          </span>
+          <span class="text-sm font-bold text-zinc-200 dark:text-zinc-200 light:text-zinc-800 mb-0.5">
+            {item.label}
+          </span>
+          <span class="text-xs text-zinc-400 dark:text-zinc-400 light:text-zinc-500">
+            {item.desc}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Tech Stack Pill Ticker -->
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <span class="text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-400 light:text-zinc-500 mr-2">
+        Core Capabilities:
+      </span>
+      {tools.map((tool) => (
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-800/50 dark:bg-zinc-800/50 light:bg-zinc-200 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 border border-zinc-700/50 dark:border-zinc-700/50 light:border-zinc-300">
+          {tool}
+        </span>
+      ))}
+    </div>
+
+  </div>
+</section>

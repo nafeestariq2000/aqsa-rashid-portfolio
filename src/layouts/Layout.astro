@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Aqsa Rashid | Google Certified UI/UX Designer & Webflow Developer",
+  description = "Google UX certified Web UI/UX designer & Figma specialist. Crafting clean, high-converting landing pages, Webflow sites, & social media graphics. Hire today!"
+} = Astro.props;
+
+const personSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aqsa Rashid",
+  "jobTitle": "Web UI/UX Designer & Webflow Developer",
+  "email": "mailto:hi.aqsarashid@gmail.com",
+  "telephone": "+923323773369",
+  "url": "https://aqsarashid.com",
+  "image": "https://aqsarashid.com/images/aqsa-portrait.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/in/hi-aqsarashid",
+    "https://www.behance.net/aqsarashid2",
+    "https://www.fiverr.com/aqsa_rashid115"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Google UX Design Specialization",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Google"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Print and Digital Elements of Design: Branding and User Experience",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "University of Colorado Boulder"
+      }
+    }
+  ],
+  "knowsAbout": ["Figma", "UI/UX Design", "Webflow", "Landing Page Optimization", "Graphic Design", "Social Media Branding"]
+});
+
+const serviceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Aqsa Rashid — Digital Design Studio",
+  "url": "https://aqsarashid.com",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Karachi",
+    "addressCountry": "PK"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "51"
+  }
+});
+---
+
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Aqsa Rashid" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/aqsa-portrait.jpg" />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={personSchema}></script>
+    <script type="application/ld+json" set:html={serviceSchema}></script>
+
+    <!-- Theme Switcher Script -->
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          return 'light';
+        }
+        return 'dark';
+      })();
+
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      } else {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      }
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#0d0e11] text-zinc-100 transition-colors duration-300">
+    <slot />
+
+    <script is:inline>
+      window.toggleTheme = function() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          localStorage.setItem('theme', 'light');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+---
+---
+
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-[#0d0e11]/80 dark:bg-[#0d0e11]/80 light:bg-white/80 border-b border-white/5 dark:border-white/5 light:border-black/5 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="#" class="group flex items-center gap-3 focus:outline-none">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 via-brand-500 to-brand-600 flex items-center justify-center text-white font-bold font-display text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+        AR
+      </div>
+      <div class="flex flex-col">
+        <span class="font-display font-bold text-lg text-zinc-100 dark:text-zinc-100 light:text-zinc-900 tracking-tight leading-tight group-hover:text-brand-500 transition-colors">
+          AQSA RASHID
+        </span>
+        <span class="text-xs text-zinc-400 dark:text-zinc-400 light:text-zinc-500 font-medium">
+          Web UI & Webflow Specialist
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300 dark:text-zinc-300 light:text-zinc-700">
+      <a href="#about" class="hover:text-brand-500 transition-colors py-1">About</a>
+      <a href="#services" class="hover:text-brand-500 transition-colors py-1">Services</a>
+      <a href="#work" class="hover:text-brand-500 transition-colors py-1">Work</a>
+      <a href="#reviews" class="hover:text-brand-500 transition-colors py-1">Reviews</a>
+      <a href="#faq" class="hover:text-brand-500 transition-colors py-1">FAQ</a>
+      <a href="#contact" class="hover:text-brand-500 transition-colors py-1">Contact</a>
+    </nav>
+
+    <!-- Header Right Actions -->
+    <div class="flex items-center gap-4">
+      <!-- Dark/Light Theme Toggle -->
+      <button
+        onclick="window.toggleTheme()"
+        aria-label="Toggle dark/light mode"
+        class="p-2.5 rounded-xl border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 bg-zinc-900/60 dark:bg-zinc-900/60 light:bg-zinc-100 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 hover:text-brand-500 hover:border-brand-500/40 transition-all duration-300"
+      >
+        <!-- Moon icon for light mode -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:block text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path><path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path><path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <!-- Sun icon for dark mode -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 block dark:hidden text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+      </button>
+
+      <!-- Action CTA Button -->
+      <a
+        href="#contact"
+        class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+      >
+        Book a Call ↗
+      </a>
+    </div>
+  </div>
+</header>
