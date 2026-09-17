@@ -78,7 +78,7 @@ const serviceSchema = JSON.stringify({
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Social Cards -->
     <meta property="og:title" content={title} />
@@ -90,14 +90,16 @@ const serviceSchema = JSON.stringify({
     <script type="application/ld+json" set:html={personSchema}></script>
     <script type="application/ld+json" set:html={serviceSchema}></script>
 
-    <!-- Theme Switcher Script -->
+    <!-- Theme Switcher Script (Supports URL param ?theme=light or ?theme=dark) -->
     <script is:inline>
       const theme = (() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const themeParam = urlParams.get('theme');
+        if (themeParam === 'light' || themeParam === 'dark') {
+          return themeParam;
+        }
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
           return localStorage.getItem('theme');
-        }
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          return 'light';
         }
         return 'dark';
       })();
