@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import SolarWebsiteHero from '../../components/work/SolarWebsiteHero.astro';
+import SolarWebsiteProblem from '../../components/work/SolarWebsiteProblem.astro';
+import SolarWebsiteStrategy from '../../components/work/SolarWebsiteStrategy.astro';
+import SolarWebsiteShowcase from '../../components/work/SolarWebsiteShowcase.astro';
+import SolarWebsiteResults from '../../components/work/SolarWebsiteResults.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Selected Work",
+      "item": "https://aqsarashid.com/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solar & Sustainability Website Case Study",
+      "item": "https://aqsarashid.com/work/solar-energy-website/"
+    }
+  ]
+});
+
+const caseStudySchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Soller & Aetherfield — Solar Energy & Sustainability Website Design",
+  "author": {
+    "@type": "Person",
+    "name": "Aqsa Rashid"
+  },
+  "headline": "Designing a High-Converting Green Tech Web Experience for Soller & Aetherfield",
+  "about": "Figma UI/UX & Webflow CMS Case Study",
+  "genre": "Web UI/UX & Webflow Case Study"
+});
+---
+
+<Layout
+  title="Solar Energy & Sustainability Website Case Study | Figma & Webflow — Aqsa Rashid"
+  description="Discover how Aqsa Rashid designed a high-converting green tech website for Soller & Aetherfield. Figma UI design system and Webflow CMS integration drove +210% consultation bookings."
+>
+  <!-- Embed Schema Markup -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+  <script type="application/ld+json" set:html={caseStudySchema}></script>
+
+  <Header />
+  
+  <main class="flex-grow">
+    <!-- Section 1: Hero Banner & Case Study Overview -->
+    <SolarWebsiteHero />
+
+    <!-- Section 2: Problem vs. Solution -->
+    <SolarWebsiteProblem />
+
+    <!-- Section 3: 4-Phase Creative & Webflow Process -->
+    <SolarWebsiteStrategy />
+
+    <!-- Section 4: Design Deliverables & SaaS Platform Showcase -->
+    <SolarWebsiteShowcase />
+
+    <!-- Section 5: Campaign Impact, Metrics & Testimonial -->
+    <SolarWebsiteResults />
+
+    <!-- Section 6: Contact CTA -->
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
