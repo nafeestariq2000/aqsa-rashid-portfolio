@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import GymBrandingHero from '../../components/work/GymBrandingHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Selected Work",
+      "item": "https://aqsarashid.com/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fitness Gym Social Media Branding Case Study",
+      "item": "https://aqsarashid.com/work/fitness-social-media-branding/"
+    }
+  ]
+});
+
+const caseStudySchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Apex Fitness Club — High-Impact Gym Social Media & Brand Campaign",
+  "author": {
+    "@type": "Person",
+    "name": "Aqsa Rashid"
+  },
+  "headline": "Crafting a High-Contrast Social Campaign to Drive +450% Engagement Reach",
+  "about": "Social Media Branding & Instagram Carousel Case Study",
+  "genre": "Visual Branding Case Study"
+});
+---
+
+<Layout
+  title="Fitness Gym Social Media Branding Case Study | Instagram Carousels — Aqsa Rashid"
+  description="Explore the visual branding case study for Apex Fitness Club. Discover how high-contrast Instagram carousels and ad creatives drove +450% higher engagement reach."
+>
+  <!-- Embed Schema Markup -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+  <script type="application/ld+json" set:html={caseStudySchema}></script>
+
+  <Header />
+  
+  <main class="flex-grow">
+    <!-- Section 1: Hero Banner & Case Study Overview -->
+    <GymBrandingHero />
+  </main>
+
+  <Footer />
+</Layout>
