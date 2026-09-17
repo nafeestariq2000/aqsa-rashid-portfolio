@@ -85,7 +85,7 @@ const services = [
               <div class="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform">
                 {s.icon}
               </div>
-              <span class={`px-3 py-1 rounded-full text-[11px] font-bold border ${s.badgeColor}`}>
+              <span class={`px-3 py-1 rounded-full text-xs font-bold border ${s.badgeColor}`}>
                 {s.turnaround}
               </span>
             </div>
@@ -94,7 +94,7 @@ const services = [
             <h3 class="font-display text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
               {s.title}
             </h3>
-            <p class="text-xs font-bold text-brand-600 dark:text-brand-400 mb-4">
+            <p class="text-sm font-bold text-brand-600 dark:text-brand-400 mb-4">
               {s.subtitle}
             </p>
             <p class="text-sm text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-6">
@@ -107,7 +107,7 @@ const services = [
                 Key Deliverables Included:
               </p>
               {s.deliverables.map((item) => (
-                <div class="flex items-start gap-2.5 text-xs font-medium text-zinc-700 dark:text-zinc-300">
+                <div class="flex items-start gap-2.5 text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   <span class="text-emerald-500 font-bold shrink-0 mt-0.5">✓</span>
                   <span>{item}</span>
                 </div>
@@ -116,13 +116,13 @@ const services = [
           </div>
 
           <!-- Bottom Footer CTA -->
-          <div class="pt-6 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-zinc-400">
+          <div class="pt-6 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between gap-2">
+            <span class="text-xs font-medium text-zinc-400">
               Target: <strong class="text-zinc-700 dark:text-zinc-300">{s.targetAudience}</strong>
             </span>
             <a
               href={s.link}
-              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-brand-600 dark:text-brand-400 bg-brand-500/10 hover:bg-brand-500/20 border border-brand-500/20 transition-all"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-brand-600 dark:text-brand-400 bg-brand-500/10 hover:bg-brand-500/20 border border-brand-500/20 transition-all shrink-0"
             >
               Explore Deep Dive ↗
             </a>

@@ -239,7 +239,7 @@ const projects = [
               
               <!-- Badge Overlay Left -->
               <div class="absolute top-4 left-4 z-10">
-                <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-zinc-100 border border-zinc-200/80 dark:border-zinc-700 shadow-md backdrop-blur-md">
+                <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-zinc-100 border border-zinc-200/80 dark:border-zinc-700 shadow-md backdrop-blur-md">
                   {item.categoryLabel}
                 </span>
               </div>
@@ -247,11 +247,11 @@ const projects = [
               <!-- Badge Overlay Right -->
               <div class="absolute top-4 right-4 z-10">
                 {item.isDeepDive ? (
-                  <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-brand-500 text-white shadow-md">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500 text-white shadow-md">
                     ★ Deep Dive
                   </span>
                 ) : (
-                  <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 backdrop-blur-md">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 backdrop-blur-md">
                     {item.metric}
                   </span>
                 )}
@@ -260,7 +260,7 @@ const projects = [
 
             <!-- Card Body Content -->
             <div class="p-6 sm:p-8">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 block mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 block mb-2">
                 {item.client}
               </span>
 
@@ -268,14 +268,14 @@ const projects = [
                 {item.title}
               </h3>
 
-              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
                 {item.description}
               </p>
 
               <!-- Deliverables Pills -->
               <div class="flex flex-wrap gap-1.5 mb-6">
                 {item.deliverables.map((deliv) => (
-                  <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-100 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 border border-zinc-200/60 dark:border-zinc-700/60">
+                  <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-zinc-100 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 border border-zinc-200/60 dark:border-zinc-700/60">
                     ✓ {deliv}
                   </span>
                 ))}

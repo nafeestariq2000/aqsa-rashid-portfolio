@@ -90,10 +90,10 @@ const socials = [
                 <div class="flex items-center gap-3">
                   <div class={`w-9 h-9 rounded-xl border flex items-center justify-center ${s.bgColor} ${s.iconColor}`} set:html={s.iconSvg}></div>
                   <div>
-                    <h4 class="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-500 transition-colors">
+                    <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-500 transition-colors">
                       {s.name}
                     </h4>
-                    <p class="text-[10px] text-zinc-500 dark:text-zinc-400 font-mono">
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
                       {s.handle}
                     </p>
                   </div>
@@ -116,7 +116,7 @@ const socials = [
           <h3 class="font-display text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
             Send a Direct Message
           </h3>
-          <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mb-8">
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">
             Fill out the simple form below. Zero spam guaranteed — Aqsa will review and reply within 24 hours.
           </p>
 
@@ -125,7 +125,7 @@ const socials = [
             <!-- Grid: Name & Email -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label for="name" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                <label for="name" class="block text-xs sm:text-sm font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
                   Your Full Name *
                 </label>
                 <input
@@ -139,7 +139,7 @@ const socials = [
               </div>
 
               <div>
-                <label for="email" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                <label for="email" class="block text-xs sm:text-sm font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
                   Your Email Address *
                 </label>
                 <input
@@ -156,7 +156,7 @@ const socials = [
             <!-- Grid: Project Type & Timeline -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label for="service" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                <label for="service" class="block text-xs sm:text-sm font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
                   Service Category
                 </label>
                 <select
@@ -172,7 +172,7 @@ const socials = [
               </div>
 
               <div>
-                <label for="timeline" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                <label for="timeline" class="block text-xs sm:text-sm font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
                   Estimated Timeline
                 </label>
                 <select
@@ -190,7 +190,7 @@ const socials = [
 
             <!-- Message Area -->
             <div>
-              <label for="message" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+              <label for="message" class="block text-xs sm:text-sm font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
                 Project Overview / Details *
               </label>
               <textarea

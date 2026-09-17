@@ -71,7 +71,7 @@ const rows = [
         <!-- Table Header -->
         <thead>
           <tr class="border-b border-zinc-200/80 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
-            <th class="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 w-1/4">
+            <th class="p-4 sm:p-6 text-xs sm:text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 w-1/4">
               Capability / Metric
             </th>
             <th class="p-4 sm:p-6 text-sm font-extrabold text-brand-600 dark:text-brand-400 w-1/4">
@@ -90,16 +90,16 @@ const rows = [
         <tbody class="divide-y divide-zinc-200/60 dark:divide-zinc-800/60">
           {rows.map((row) => (
             <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/30 transition-colors">
-              <td class="p-4 sm:p-6 text-xs sm:text-sm font-bold text-zinc-900 dark:text-zinc-100">
+              <td class="p-4 sm:p-6 text-sm font-bold text-zinc-900 dark:text-zinc-100">
                 {row.feature}
               </td>
-              <td class="p-4 sm:p-6 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+              <td class="p-4 sm:p-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                 {row.uiUx}
               </td>
-              <td class="p-4 sm:p-6 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+              <td class="p-4 sm:p-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                 {row.webflow}
               </td>
-              <td class="p-4 sm:p-6 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+              <td class="p-4 sm:p-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                 {row.social}
               </td>
             </tr>
