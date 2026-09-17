@@ -1,0 +1,70 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Discovery & Strategy Audit",
+    duration: "1–2 Days",
+    desc: "We analyze your brand goals, user persona requirements, key conversion metrics, and visual benchmarks to establish a clear project roadmap."
+  },
+  {
+    number: "02",
+    title: "Wireframing & UI Architecture",
+    duration: "3–5 Days",
+    desc: "Designing responsive low-fidelity wireframes and structuring design tokens (typography scale, brand color variables, auto-layout components) in Figma."
+  },
+  {
+    number: "03",
+    title: "High-Fidelity Build & Interactivity",
+    duration: "5–7 Days",
+    desc: "Crafting pixel-perfect Figma UI screens or building a clean, responsive Webflow site with Client-First class naming and custom micro-interactions."
+  },
+  {
+    number: "04",
+    title: "QA Testing & Launch Handoff",
+    duration: "1–2 Days",
+    desc: "Testing Core Web Vitals, cross-browser compatibility, and mobile responsiveness before handing off organized Figma files or deploying live."
+  }
+];
+---
+
+<section class="py-16 sm:py-20 md:py-24 bg-zinc-50 dark:bg-[#0b0c0e] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-4">
+        Structured <span class="text-gradient">4-Step Workflow</span>
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        A transparent, milestone-driven design and development process built for zero surprises and on-time delivery.
+      </p>
+    </div>
+
+    <!-- 4-Step Process Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((step) => (
+        <div class="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-lg flex flex-col justify-between hover:border-brand-500/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-display text-3xl font-extrabold text-brand-600 dark:text-brand-400">
+                {step.number}
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/60 dark:border-zinc-700/60">
+                {step.duration}
+              </span>
+            </div>
+
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+              {step.title}
+            </h3>
+
+            <p class="text-xs text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed">
+              {step.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

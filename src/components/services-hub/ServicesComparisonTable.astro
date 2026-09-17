@@ -1,0 +1,113 @@
+---
+const rows = [
+  {
+    feature: "Primary Toolchain",
+    uiUx: "Figma (Auto-Layout 5.0)",
+    webflow: "Webflow + Custom Code",
+    social: "Figma + Photoshop"
+  },
+  {
+    feature: "Primary Output Asset",
+    uiUx: "Figma File & Design Tokens",
+    webflow: "Live Webflow Site (HTML/CSS)",
+    social: "Exported PNG/JPG & Figma File"
+  },
+  {
+    feature: "Mobile Responsiveness",
+    uiUx: "Mobile & Tablet UI Frames",
+    webflow: "Fluid Breakpoints (375px–1440px+)",
+    social: "Instagram & Mobile Ad Sizes"
+  },
+  {
+    feature: "Interactivity & Animations",
+    uiUx: "Figma Interactive Prototypes",
+    webflow: "Custom Webflow IX2 Interactions",
+    social: "Static & Motion Carousel Slides"
+  },
+  {
+    feature: "Turnaround Time",
+    uiUx: "1 – 2 Weeks",
+    webflow: "2 – 3 Weeks",
+    social: "3 – 5 Days"
+  },
+  {
+    feature: "Included Revisions",
+    uiUx: "Unlimited During Milestone",
+    webflow: "Unlimited During Build Phase",
+    social: "2 Rounds Per Campaign"
+  },
+  {
+    feature: "Developer Handoff Specs",
+    uiUx: "Full Design Tokens & Redlines",
+    webflow: "Client-First BEM Classes",
+    social: "Exported Assets (1x, 2x)"
+  },
+  {
+    feature: "Ideal Client Profile",
+    uiUx: "SaaS Founders & Product Teams",
+    webflow: "Businesses Wanting High Speed",
+    social: "Marketers & E-Commerce Brands"
+  }
+];
+---
+
+<section class="py-16 sm:py-20 md:py-24 bg-white dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-4">
+        Service Capabilities <span class="text-gradient">Comparison</span>
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        A transparent breakdown of deliverables, turnaround times, tools, and output specs for each service category.
+      </p>
+    </div>
+
+    <!-- Responsive Comparison Table -->
+    <div class="overflow-x-auto rounded-3xl border border-zinc-200/80 dark:border-zinc-800 shadow-xl bg-white dark:bg-zinc-900">
+      <table class="w-full text-left border-collapse min-w-[700px]">
+        
+        <!-- Table Header -->
+        <thead>
+          <tr class="border-b border-zinc-200/80 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
+            <th class="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 w-1/4">
+              Capability / Metric
+            </th>
+            <th class="p-4 sm:p-6 text-sm font-extrabold text-brand-600 dark:text-brand-400 w-1/4">
+              ❖ Web UI/UX Design
+            </th>
+            <th class="p-4 sm:p-6 text-sm font-extrabold text-emerald-600 dark:text-emerald-400 w-1/4">
+              ⚡ Figma to Webflow
+            </th>
+            <th class="p-4 sm:p-6 text-sm font-extrabold text-amber-600 dark:text-amber-400 w-1/4">
+              ✨ Social Media Design
+            </th>
+          </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody class="divide-y divide-zinc-200/60 dark:divide-zinc-800/60">
+          {rows.map((row) => (
+            <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/30 transition-colors">
+              <td class="p-4 sm:p-6 text-xs sm:text-sm font-bold text-zinc-900 dark:text-zinc-100">
+                {row.feature}
+              </td>
+              <td class="p-4 sm:p-6 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                {row.uiUx}
+              </td>
+              <td class="p-4 sm:p-6 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                {row.webflow}
+              </td>
+              <td class="p-4 sm:p-6 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                {row.social}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+</section>

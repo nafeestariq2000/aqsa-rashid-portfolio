@@ -1,0 +1,136 @@
+---
+const services = [
+  {
+    id: "ui-ux",
+    icon: "❖",
+    accentColor: "from-brand-500/20 to-purple-500/20",
+    badgeColor: "bg-brand-500/10 text-brand-600 dark:text-brand-400 border-brand-500/30",
+    title: "User Experience & Web UI Design",
+    subtitle: "Google UX Certified Landing Pages & SaaS Product Interfaces",
+    description: "Designing clean, intuitive, and high-converting web layouts in Figma. Built on user psychology, structured wireframes, design tokens, and fluid auto-layout 5.0.",
+    deliverables: [
+      "Low & High-Fidelity Wireframes",
+      "Figma Auto-Layout 5.0 Component Systems",
+      "Responsive Desktop, Tablet & Mobile Frames",
+      "Design System Tokens (Colors, Types, Spacing)",
+      "Interactive Figma Prototypes"
+    ],
+    turnaround: "1–2 Weeks Delivery",
+    targetAudience: "SaaS Founders, Product Teams & Startups",
+    link: `${import.meta.env.BASE_URL}services/figma-ui-ux-design/`
+  },
+  {
+    id: "webflow",
+    icon: "⚡",
+    accentColor: "from-emerald-500/20 to-teal-500/20",
+    badgeColor: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+    title: "Figma to Webflow Development",
+    subtitle: "Pixel-Perfect, Fast-Loading & Responsive Webflow Builds",
+    description: "Converting static Figma UI files into semantic, lightning-fast Webflow websites. Built with Client-First class architecture, custom micro-interactions, and 100/100 Web Vitals.",
+    deliverables: [
+      "Manual Figma-to-Webflow Translation",
+      "Client-First BEM Class Naming Architecture",
+      "Webflow CMS Setup & Dynamic Collections",
+      "Custom IX2 Animations & Micro-Interactions",
+      "On-Page SEO & Core Web Vitals Optimization"
+    ],
+    turnaround: "2–3 Weeks Delivery",
+    targetAudience: "Businesses Needing a Live Performant Site",
+    link: `${import.meta.env.BASE_URL}services/figma-to-webflow/`
+  },
+  {
+    id: "social",
+    icon: "✨",
+    accentColor: "from-amber-500/20 to-orange-500/20",
+    badgeColor: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
+    title: "Social Media Branding & Ad Assets",
+    subtitle: "High-Contrast Visual Campaign Graphics & Ad Creatives",
+    description: "Crafting scroll-stopping social media assets, multi-slide educational Instagram carousels, ad banner visual sets, and print-ready outdoor billboard mockups for maximum engagement.",
+    deliverables: [
+      "Educational Instagram Carousels (1080x1350)",
+      "High-Conversion Meta & Google Ad Banners",
+      "Outdoor Billboard & Print Campaign Mockups",
+      "Brand Color Palette & Typography Templates",
+      "Editable Source Files (Figma / PSD)"
+    ],
+    turnaround: "3–5 Days Delivery",
+    targetAudience: "Brands, Marketers & E-Commerce Stores",
+    link: `${import.meta.env.BASE_URL}services/social-media-design/`
+  }
+];
+---
+
+<section id="services-grid" class="py-16 sm:py-20 md:py-24 bg-zinc-50 dark:bg-[#0b0c0e] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-4">
+        Core Service <span class="text-gradient">Offerings</span>
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Choose a specialized service tier or combine UI design with Webflow development for a seamless end-to-end launch.
+      </p>
+    </div>
+
+    <!-- 3-Column Service Pillar Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {services.map((s) => (
+        <div class="relative flex flex-col justify-between p-7 sm:p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xl hover:border-brand-500/40 transition-all duration-300 group">
+          
+          <!-- Card Content -->
+          <div>
+            <!-- Header Icon & Badge -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform">
+                {s.icon}
+              </div>
+              <span class={`px-3 py-1 rounded-full text-[11px] font-bold border ${s.badgeColor}`}>
+                {s.turnaround}
+              </span>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+              {s.title}
+            </h3>
+            <p class="text-xs font-bold text-brand-600 dark:text-brand-400 mb-4">
+              {s.subtitle}
+            </p>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-6">
+              {s.description}
+            </p>
+
+            <!-- Key Deliverables List -->
+            <div class="space-y-2.5 mb-8 pt-6 border-t border-zinc-100 dark:border-zinc-800">
+              <p class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">
+                Key Deliverables Included:
+              </p>
+              {s.deliverables.map((item) => (
+                <div class="flex items-start gap-2.5 text-xs font-medium text-zinc-700 dark:text-zinc-300">
+                  <span class="text-emerald-500 font-bold shrink-0 mt-0.5">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Bottom Footer CTA -->
+          <div class="pt-6 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-zinc-400">
+              Target: <strong class="text-zinc-700 dark:text-zinc-300">{s.targetAudience}</strong>
+            </span>
+            <a
+              href={s.link}
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-brand-600 dark:text-brand-400 bg-brand-500/10 hover:bg-brand-500/20 border border-brand-500/20 transition-all"
+            >
+              Explore Deep Dive ↗
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

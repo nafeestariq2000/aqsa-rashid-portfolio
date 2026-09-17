@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicesHero from '../../components/services-hub/ServicesHero.astro';
+import ServicesGrid from '../../components/services-hub/ServicesGrid.astro';
+import ServicesComparisonTable from '../../components/services-hub/ServicesComparisonTable.astro';
+import ServicesProcess from '../../components/services-hub/ServicesProcess.astro';
+import Contact from '../../components/Contact.astro';
+
+// SEO JSON-LD Breadcrumb Schema
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://aqsarashid.com/services/"
+    }
+  ]
+});
+---
+
+<Layout
+  title="Digital Design & Webflow Development Services | Aqsa Rashid"
+  description="Explore digital design and development services by Aqsa Rashid: Figma UI/UX landing page design, manual Figma-to-Webflow development, and social media branding campaigns."
+>
+  <!-- Embed Schema Markup -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+
+  <main class="w-full overflow-x-hidden">
+    <!-- Section 1: Hero -->
+    <ServicesHero />
+
+    <!-- Section 2: Core Service Pillars Grid -->
+    <ServicesGrid />
+
+    <!-- Section 3: Capabilities & Feature Comparison Table -->
+    <ServicesComparisonTable />
+
+    <!-- Section 4: 4-Step Collaborative Workflow -->
+    <ServicesProcess />
+
+    <!-- Section 5: Contact CTA -->
+    <Contact />
+  </main>
+</Layout>
