@@ -1,0 +1,86 @@
+---
+const phases = [
+  {
+    phase: "01",
+    title: "User Empathy & Persona Research",
+    icon: "💡",
+    desc: "Interviewed SaaS creators and agency marketers to map user friction points. Identified that 72% of visitors wanted immediate visual proof of rendering speed before signing up.",
+    output: "User Personas & Pain Point Map"
+  },
+  {
+    phase: "02",
+    title: "Information Architecture & Flow",
+    icon: "📐",
+    desc: "Architected a high-converting 6-section landing page hierarchy: Hero -> Social Proof Strip -> Interactive Preview -> Feature Cards -> Testimonials -> FAQ -> Primary CTA.",
+    output: "Landing Page Content Flow Map"
+  },
+  {
+    phase: "03",
+    title: "Low-Fidelity Grayscale Wireframes",
+    icon: "✏️",
+    desc: "Built rapid grayscale wireframes in Figma to validate section spacing, visual weight, and CTA button placement prior to visual branding polish.",
+    output: "Interactive Figma Wireframe Deck"
+  },
+  {
+    phase: "04",
+    title: "WCAG AA Accessibility Audit",
+    icon: "♿",
+    desc: "Audited color contrast ratios (minimum 4.5:1), touch-target dimensions (minimum 48x48px on mobile), and legible font scaling across all breakpoints.",
+    output: "Accessibility Compliance Audit"
+  }
+];
+---
+
+<section id="process" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-3">
+        UX PROCESS & WIREFRAMING
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Grounded in <span class="text-gradient">Google UX Design Protocols</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Every design decision in this case study was validated through user research, iterative wireframing, and accessibility testing.
+      </p>
+    </div>
+
+    <!-- 4-Phase Process Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {phases.map((item) => (
+        <div class="group relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-purple-500/50 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          
+          <div>
+            <!-- Header Row: Phase Number & Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display text-3xl font-extrabold text-purple-500/30 group-hover:text-purple-500 transition-colors">
+                {item.phase}
+              </span>
+              <span class="text-2xl p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800">
+                {item.icon}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Bottom Output Tag -->
+          <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-1">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400">Key UX Output:</span>
+            <span class="text-xs font-bold text-purple-600 dark:text-purple-400">{item.output}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
