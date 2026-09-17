@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import FigmaHero from '../../components/services/FigmaHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://aqsarashid.com/#services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Figma UI/UX Design",
+      "item": "https://aqsarashid.com/services/figma-ui-ux-design/"
+    }
+  ]
+});
+---
+
+<Layout
+  title="Figma UI/UX Design Services | Custom Web & Landing Page Designer — Aqsa Rashid"
+  description="Hire Google UX Certified Figma UI/UX Designer Aqsa Rashid. Designing high-converting landing page layouts, SaaS web apps, wireframes, and scalable design systems."
+>
+  <!-- Embed Breadcrumb Schema -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+
+  <Header />
+  
+  <main class="flex-grow">
+    <!-- Section 1: Hero Section -->
+    <FigmaHero />
+  </main>
+
+  <Footer />
+</Layout>
