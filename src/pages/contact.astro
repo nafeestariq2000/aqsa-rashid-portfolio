@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import ContactHero from '../components/contact/ContactHero.astro';
 import ContactContent from '../components/contact/ContactContent.astro';
 import ContactFAQ from '../components/contact/ContactFAQ.astro';
+import Footer from '../components/Footer.astro';
 
 // SEO JSON-LD Breadcrumb Schema
 const breadcrumbSchema = JSON.stringify({
@@ -48,6 +50,9 @@ const contactPageSchema = JSON.stringify({
   <script type="application/ld+json" set:html={breadcrumbSchema}></script>
   <script type="application/ld+json" set:html={contactPageSchema}></script>
 
+  <!-- Navbar -->
+  <Header />
+
   <main class="w-full overflow-x-hidden">
     <!-- Section 1: Contact Hero -->
     <ContactHero />
@@ -58,4 +63,7 @@ const contactPageSchema = JSON.stringify({
     <!-- Section 3: Contact FAQ -->
     <ContactFAQ />
   </main>
+
+  <!-- Footer -->
+  <Footer />
 </Layout>
