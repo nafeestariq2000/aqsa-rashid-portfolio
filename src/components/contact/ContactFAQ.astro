@@ -1,0 +1,48 @@
+---
+const faqs = [
+  {
+    q: "How quickly do you reply to new project inquiries?",
+    a: "I review and respond to all direct contact form messages and emails within 24 hours (Monday through Saturday)."
+  },
+  {
+    q: "What design tools & handoff formats do you deliver?",
+    a: "All UI/UX projects are delivered as organized Figma source files with Auto-Layout 5.0, reusable component variants, and design token specs. Webflow builds are transferred directly to your Webflow dashboard."
+  },
+  {
+    q: "How are payment milestones structured?",
+    a: "Standard projects operate on a 50% deposit upfront to reserve schedule bandwidth, with the remaining 50% due upon final approval before file/domain transfer."
+  },
+  {
+    q: "Do you offer white-label design services for agencies?",
+    a: "Yes! I regularly partner with tech agencies, Webflow studios, and product teams on white-label UI/UX and Webflow contracts."
+  }
+];
+---
+
+<section class="py-16 sm:py-20 md:py-24 bg-white dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-12">
+      <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-3">
+        Frequently Asked <span class="text-gradient">Questions</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+        Quick answers regarding project booking, deliverables, and agency contracts.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((f) => (
+        <div class="p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800">
+          <h3 class="text-sm font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+            {f.q}
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            {f.a}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

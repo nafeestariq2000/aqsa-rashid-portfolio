@@ -15,58 +15,151 @@
       <span class="text-brand-600 dark:text-brand-400 font-bold">Services Hub</span>
     </nav>
 
-    <div class="max-w-3xl flex flex-col items-start text-left">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
       
-      <!-- Pill Badge -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
-        <span>🚀</span> Tailored Design & Development Solutions
+      <!-- Left Column: Copy & Anchor Pills -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left">
+        
+        <!-- Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
+          <span>🚀</span> Tailored Design & Development Solutions
+        </div>
+
+        <!-- Main H1 Headline -->
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-[1.12] tracking-tight mb-6">
+          End-to-End Digital Design & <span class="text-gradient">Webflow Services</span>.
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-8">
+          From initial user wireframes in Figma to production-ready Webflow builds and high-impact social media brand graphics. Every service is engineered for clean aesthetics, speed, and high conversion.
+        </p>
+
+        <!-- Anchor Jump Pills -->
+        <div class="flex flex-wrap items-center gap-3 mb-10">
+          <a
+            href="#services-grid"
+            class="px-4 py-2 rounded-xl text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 hover:border-brand-500 hover:text-brand-500 transition-all shadow-sm flex items-center gap-2"
+          >
+            <span class="text-brand-500 font-extrabold">❖</span> Web UI/UX Design
+          </a>
+          <a
+            href="#services-grid"
+            class="px-4 py-2 rounded-xl text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 hover:border-emerald-500 hover:text-emerald-500 transition-all shadow-sm flex items-center gap-2"
+          >
+            <span class="text-emerald-500 font-extrabold">⚡</span> Figma to Webflow
+          </a>
+          <a
+            href="#services-grid"
+            class="px-4 py-2 rounded-xl text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 hover:border-amber-500 hover:text-amber-500 transition-all shadow-sm flex items-center gap-2"
+          >
+            <span class="text-amber-500 font-extrabold">✨</span> Social Media Design
+          </a>
+        </div>
+
+        <!-- Quick Trust Indicators -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-zinc-200/80 dark:border-zinc-800/80 w-full">
+          <div>
+            <p class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 font-display">50+</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Projects Delivered</p>
+          </div>
+          <div>
+            <p class="text-2xl sm:text-3xl font-extrabold text-brand-600 dark:text-brand-400 font-display">5.0 ★</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Client Satisfaction</p>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-display">Google</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">UX Certified Specialist</p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Main H1 Headline -->
-      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-[1.12] tracking-tight mb-6">
-        End-to-End Digital Design & <span class="text-gradient">Webflow Services</span>.
-      </h1>
+      <!-- Right Column: Services Workstation Architecture Showcase Card -->
+      <div class="lg:col-span-5 relative flex items-center justify-center mt-8 lg:mt-0">
+        <div class="relative w-full max-w-lg rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 p-5 shadow-2xl shadow-brand-500/10 group">
+          
+          <!-- Outer Glow -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-500 to-amber-400 opacity-15 blur-xl -z-10 group-hover:opacity-25 transition-opacity"></div>
 
-      <!-- Sub-headline -->
-      <p class="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-8">
-        From initial user wireframes in Figma to production-ready Webflow builds and high-impact social media brand graphics. Every service is engineered for clean aesthetics, speed, and high conversion.
-      </p>
+          <!-- Header Bar -->
+          <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-zinc-100 dark:border-zinc-800/80">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+              </div>
+              <span class="ml-2 px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/60 dark:border-zinc-700/60 flex items-center gap-1.5">
+                <span class="text-brand-500">❖</span> services_architecture.fig
+              </span>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              ● 3 Core Pillars
+            </span>
+          </div>
 
-      <!-- Anchor Jump Pills -->
-      <div class="flex flex-wrap items-center gap-3 mb-10">
-        <a
-          href="#services-grid"
-          class="px-4 py-2 rounded-xl text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 hover:border-brand-500 hover:text-brand-500 transition-all shadow-sm flex items-center gap-2"
-        >
-          <span class="text-brand-500 font-extrabold">❖</span> Web UI/UX Design
-        </a>
-        <a
-          href="#services-grid"
-          class="px-4 py-2 rounded-xl text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 hover:border-emerald-500 hover:text-emerald-500 transition-all shadow-sm flex items-center gap-2"
-        >
-          <span class="text-emerald-500 font-extrabold">⚡</span> Figma to Webflow
-        </a>
-        <a
-          href="#services-grid"
-          class="px-4 py-2 rounded-xl text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 hover:border-amber-500 hover:text-amber-500 transition-all shadow-sm flex items-center gap-2"
-        >
-          <span class="text-amber-500 font-extrabold">✨</span> Social Media Design
-        </a>
-      </div>
+          <!-- 3 Stacked Interactive Service Mini-Cards -->
+          <div class="space-y-3">
+            
+            <!-- Mini Card 1: UI/UX -->
+            <div class="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/60 flex items-center justify-between group/card hover:border-brand-500/50 transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-base">
+                  ❖
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-zinc-900 dark:text-zinc-100">Web UI/UX Design</h4>
+                  <p class="text-[10px] text-zinc-500 dark:text-zinc-400">Wireframes, Auto-Layout 5.0, Systems</p>
+                </div>
+              </div>
+              <span class="text-[10px] font-bold text-brand-600 dark:text-brand-400 px-2 py-0.5 rounded-full bg-brand-500/10">1-2 Wks</span>
+            </div>
 
-      <!-- Quick Trust Indicators -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-zinc-200/80 dark:border-zinc-800/80 w-full">
-        <div>
-          <p class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 font-display">50+</p>
-          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Projects Delivered</p>
-        </div>
-        <div>
-          <p class="text-2xl sm:text-3xl font-extrabold text-brand-600 dark:text-brand-400 font-display">5.0 ★</p>
-          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Client Satisfaction</p>
-        </div>
-        <div class="col-span-2 sm:col-span-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-display">Google</p>
-          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">UX Certified Specialist</p>
+            <!-- Mini Card 2: Webflow -->
+            <div class="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/60 flex items-center justify-between group/card hover:border-emerald-500/50 transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold text-base">
+                  ⚡
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-zinc-900 dark:text-zinc-100">Figma to Webflow</h4>
+                  <p class="text-[10px] text-zinc-500 dark:text-zinc-400">Client-First BEM, 100/100 Web Vitals</p>
+                </div>
+              </div>
+              <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full bg-emerald-500/10">2-3 Wks</span>
+            </div>
+
+            <!-- Mini Card 3: Social Media -->
+            <div class="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/60 flex items-center justify-between group/card hover:border-amber-500/50 transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-base">
+                  ✨
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-zinc-900 dark:text-zinc-100">Social Media Branding</h4>
+                  <p class="text-[10px] text-zinc-500 dark:text-zinc-400">Instagram Carousels & Ad Visuals</p>
+                </div>
+              </div>
+              <span class="text-[10px] font-bold text-amber-600 dark:text-amber-400 px-2 py-0.5 rounded-full bg-amber-500/10">3-5 Days</span>
+            </div>
+
+          </div>
+
+          <!-- Floating Badge Overlay -->
+          <div class="mt-4 pt-3.5 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span class="text-xs font-bold text-zinc-700 dark:text-zinc-300">100% Satisfaction Guarantee</span>
+            </div>
+            <a
+              href={`${import.meta.env.BASE_URL}contact/`}
+              class="text-xs font-extrabold text-brand-600 dark:text-brand-400 hover:underline"
+            >
+              Book a Scope Call ↗
+            </a>
+          </div>
+
         </div>
       </div>
 

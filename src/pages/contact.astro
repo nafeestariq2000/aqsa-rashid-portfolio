@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactHero from '../components/contact/ContactHero.astro';
+import ContactContent from '../components/contact/ContactContent.astro';
+import ContactFAQ from '../components/contact/ContactFAQ.astro';
+
+// SEO JSON-LD Breadcrumb Schema
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://aqsarashid.com/contact/"
+    }
+  ]
+});
+
+// SEO JSON-LD ContactPage Schema
+const contactPageSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Aqsa Rashid | Web UI/UX Designer & Webflow Developer",
+  "description": "Get in touch with Aqsa Rashid for freelance Figma UI/UX design, Webflow development, or social media branding projects. Direct email & social links included.",
+  "url": "https://aqsarashid.com/contact/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Aqsa Rashid",
+    "email": "mailto:hi.aqsarashid@gmail.com",
+    "jobTitle": "Google Certified Web UI/UX Designer & Webflow Developer"
+  }
+});
+---
+
+<Layout
+  title="Contact Aqsa Rashid | Hire Freelance UI/UX Designer & Webflow Developer"
+  description="Get in touch with Aqsa Rashid for freelance Figma UI/UX design, Webflow development, or social media branding projects. Direct email & social links included."
+>
+  <!-- Embed Schema Markup -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+  <script type="application/ld+json" set:html={contactPageSchema}></script>
+
+  <main class="w-full overflow-x-hidden">
+    <!-- Section 1: Contact Hero -->
+    <ContactHero />
+
+    <!-- Section 2: Direct Info, Social Networks & Form -->
+    <ContactContent />
+
+    <!-- Section 3: Contact FAQ -->
+    <ContactFAQ />
+  </main>
+</Layout>

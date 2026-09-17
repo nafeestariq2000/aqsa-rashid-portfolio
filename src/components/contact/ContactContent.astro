@@ -1,0 +1,222 @@
+---
+const socials = [
+  {
+    name: "LinkedIn",
+    handle: "in/hi-aqsarashid",
+    url: "https://www.linkedin.com/in/hi-aqsarashid",
+    iconColor: "text-[#0A66C2]",
+    bgColor: "bg-[#0A66C2]/10 border-[#0A66C2]/20",
+    iconSvg: `<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>`
+  },
+  {
+    name: "Behance",
+    handle: "behance.net/aqsarashid2",
+    url: "https://www.behance.net/aqsarashid2",
+    iconColor: "text-[#0057FF]",
+    bgColor: "bg-[#0057FF]/10 border-[#0057FF]/20",
+    iconSvg: `<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm-1.7 6c0-2.4-1.7-4-4.3-4-2.7 0-4.6 1.8-4.6 4.5 0 2.8 1.9 4.5 4.7 4.5 2.1 0 3.7-1 4.2-2.6h-2.1c-.3.7-1.1 1.1-2.1 1.1-1.3 0-2.3-.8-2.5-2.1h6.6c.1-.5.1-.9.1-1.4zm-4.3-2.3c1.2 0 2.1.7 2.3 1.8h-4.6c.2-1.1 1.1-1.8 2.3-1.8zM10.1 13c.7-.4 1.2-1.1 1.2-2.1 0-1.8-1.4-2.9-3.6-2.9H2v10h5.9c2.3 0 3.8-1.2 3.8-3.2 0-1.1-.6-1.7-1.6-1.8zm-5.4-3.3h2.8c.9 0 1.5.5 1.5 1.2 0 .8-.6 1.3-1.5 1.3H4.7V9.7zm3.1 6.6H4.7v-2.7h3.1c1 0 1.7.5 1.7 1.3 0 .9-.7 1.4-1.7 1.4z"/></svg>`
+  },
+  {
+    name: "Email Directly",
+    handle: "hi.aqsarashid@gmail.com",
+    url: "mailto:hi.aqsarashid@gmail.com",
+    iconColor: "text-brand-500",
+    bgColor: "bg-brand-500/10 border-brand-500/20",
+    iconSvg: `<svg class="w-5 h-5 fill-none stroke-current stroke-2 stroke-linecap-round stroke-linejoin-round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`
+  }
+];
+---
+
+<section class="py-16 sm:py-20 md:py-24 bg-zinc-50 dark:bg-[#0b0c0e] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      
+      <!-- Left Column: Direct Info & Social Media Links -->
+      <div class="lg:col-span-5 flex flex-col justify-between">
+        
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-4">
+            Direct Contact & <span class="text-gradient">Social Channels</span>
+          </h2>
+          <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-8">
+            Prefer direct messaging or reviewing work samples first? Connect through any of the verified channels below.
+          </p>
+
+          <!-- Direct Email Card -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-md mb-6">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">
+                ✉️
+              </div>
+              <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Official Business Email</span>
+            </div>
+            <a
+              href="mailto:hi.aqsarashid@gmail.com"
+              class="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100 hover:text-brand-500 transition-colors block break-all"
+            >
+              hi.aqsarashid@gmail.com
+            </a>
+          </div>
+
+          <!-- Location & Availability Card -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-md mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold text-sm">
+                🌍
+              </div>
+              <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Location & Timezone</span>
+            </div>
+            <p class="text-sm font-bold text-zinc-900 dark:text-zinc-100 mb-1">
+              Karachi, Pakistan (PKT / UTC+5)
+            </p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400">
+              Working with clients globally across USA, UK, Germany, & UAE.
+            </p>
+          </div>
+
+          <!-- Social Channels List -->
+          <div class="space-y-3">
+            <p class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2">
+              Verified Social Networks:
+            </p>
+            {socials.map((s) => (
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-3.5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-brand-500/50 shadow-sm flex items-center justify-between group transition-all"
+              >
+                <div class="flex items-center gap-3">
+                  <div class={`w-9 h-9 rounded-xl border flex items-center justify-center ${s.bgColor} ${s.iconColor}`} set:html={s.iconSvg}></div>
+                  <div>
+                    <h4 class="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-500 transition-colors">
+                      {s.name}
+                    </h4>
+                    <p class="text-[10px] text-zinc-500 dark:text-zinc-400 font-mono">
+                      {s.handle}
+                    </p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-zinc-400 group-hover:text-brand-500 transition-colors">
+                  ↗
+                </span>
+              </a>
+            ))}
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Column: Simple Good Old Contact Form -->
+      <div class="lg:col-span-7">
+        <div class="p-7 sm:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xl">
+          
+          <h3 class="font-display text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+            Send a Direct Message
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mb-8">
+            Fill out the simple form below. Zero spam guaranteed — Aqsa will review and reply within 24 hours.
+          </p>
+
+          <form action="https://formspree.io/f/mqkvnzyz" method="POST" class="space-y-5">
+            
+            <!-- Grid: Name & Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                  Your Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="e.g. Sarah Jenkins"
+                  class="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                  Your Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="e.g. sarah@company.com"
+                  class="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Grid: Project Type & Timeline -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="service" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                  Service Category
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all"
+                >
+                  <option value="Web UI/UX Design">Figma Web UI/UX Design</option>
+                  <option value="Figma to Webflow">Figma to Webflow Development</option>
+                  <option value="Social Media Branding">Social Media & Brand Assets</option>
+                  <option value="Full Project / Other">Full-Stack Design & Webflow</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="timeline" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                  Estimated Timeline
+                </label>
+                <select
+                  id="timeline"
+                  name="timeline"
+                  class="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all"
+                >
+                  <option value="Urgent (< 1 Week)">Urgent (&lt; 1 Week)</option>
+                  <option value="1-2 Weeks">1 – 2 Weeks</option>
+                  <option value="2-4 Weeks">2 – 4 Weeks</option>
+                  <option value="Flexible">Flexible / Exploring</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message Area -->
+            <div>
+              <label for="message" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-2">
+                Project Overview / Details *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Tell me brief details about your project goals, target audience, or any existing Figma/Webflow links..."
+                class="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-full py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Send Message ✉️
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
