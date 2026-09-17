@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import SocialHero from '../../components/services/SocialHero.astro';
+import SocialDeliverables from '../../components/services/SocialDeliverables.astro';
+import SocialWorkflow from '../../components/services/SocialWorkflow.astro';
+import SocialPricing from '../../components/services/SocialPricing.astro';
 import Footer from '../../components/Footer.astro';
 
 const breadcrumbSchema = JSON.stringify({
@@ -42,6 +45,15 @@ const breadcrumbSchema = JSON.stringify({
   <main class="flex-grow">
     <!-- Section 1: Hero Section -->
     <SocialHero />
+
+    <!-- Section 2: Creative Deliverables Grid -->
+    <SocialDeliverables />
+
+    <!-- Section 3: 4-Step Creative Workflow -->
+    <SocialWorkflow />
+
+    <!-- Section 4: Social Media Pricing Packages -->
+    <SocialPricing />
   </main>
 
   <Footer />

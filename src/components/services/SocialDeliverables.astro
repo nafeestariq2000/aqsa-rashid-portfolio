@@ -1,0 +1,104 @@
+---
+const deliverables = [
+  {
+    icon: "📱",
+    title: "High-Engagement Instagram Carousels",
+    badge: "1080 x 1350 Portrait",
+    desc: "Educational and promotional multi-slide carousel decks designed with seamless slide transitions to maximize saves, shares, and comments.",
+    items: ["Seamless Seamless-Slide Flow", "Hook Slide Value Framing", "Custom Vector Illustrations"]
+  },
+  {
+    icon: "🎯",
+    title: "Promotional Banner Ads & Creatives",
+    badge: "Meta & Google Ads",
+    desc: "High-converting ad banners engineered for Facebook, Instagram, LinkedIn, and display ad networks to drive click-through rates.",
+    items: ["High-Contrast Visual Hooks", "Clear Call-to-Action Buttons", "Multi-Ratio Ad Formats (1:1, 9:16, 16:9)"]
+  },
+  {
+    icon: "💼",
+    title: "LinkedIn & Twitter Personal Branding",
+    badge: "Executive Assets",
+    desc: "Professional header banners, featured post graphics, and content templates for startup founders, executives, and agency leads.",
+    items: ["High-Res LinkedIn Cover Art", "Featured Post Carousel Templates", "Brand-Aligned Profile Badges"]
+  },
+  {
+    icon: "🎨",
+    title: "Logo Design & Brand Mark Systems",
+    badge: "Vector Master Kit",
+    desc: "Custom vector logos, primary marks, sub-marks, icon favicons, and typography pairings built in Adobe Illustrator & Figma.",
+    items: ["Scalable SVG / AI Master Files", "Primary & Secondary Logotypes", "Light & Dark Background Variants"]
+  },
+  {
+    icon: "📘",
+    title: "Brand Style Guides & Visual Rules",
+    badge: "Brand PDF Guidelines",
+    desc: "Comprehensive brand rulebooks outlining logo clear space rules, color palettes (HEX/RGB/CMYK), and typography usage.",
+    items: ["Color Palette Swatches & Codes", "Font Family & Scale Hierarchy", "Do's & Don'ts Brand Usage Rules"]
+  },
+  {
+    icon: "🏛️",
+    title: "Outdoor Billboards & Event Graphics",
+    badge: "Print Ready 300 DPI",
+    desc: "Large-format vector graphics for outdoor digital billboards, event roll-up banners, flyers, and promotional merchandise.",
+    items: ["CMYK Print-Ready Files", "High-Resolution Vector Graphics", "Billboard & Signage Mockups"]
+  }
+];
+---
+
+<section id="deliverables" class="py-20 md:py-28 relative bg-zinc-100/60 dark:bg-zinc-950/60 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-3">
+        CREATIVE DELIVERABLES
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Social Media & Brand Assets <span class="text-gradient">Designed to Stop the Scroll</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Every graphic asset is tailored to your target audience, enforcing brand consistency across all digital and print marketing channels.
+      </p>
+    </div>
+
+    <!-- 6-Card Deliverables Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {deliverables.map((item) => (
+        <div class="group relative flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-purple-500/40 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          
+          <div>
+            <!-- Card Header: Icon & Badge -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-3xl p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
+                {item.icon}
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                {item.badge}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Feature Bullet Checklist -->
+          <div class="pt-6 border-t border-zinc-100 dark:border-zinc-800/80 space-y-2">
+            {item.items.map((bullet) => (
+              <div class="flex items-center gap-2.5 text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+                <span class="text-purple-500 font-bold">✓</span>
+                <span>{bullet}</span>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

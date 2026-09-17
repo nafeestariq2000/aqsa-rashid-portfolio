@@ -1,0 +1,164 @@
+---
+const packages = [
+  {
+    name: "Single Carousel / Ad Kit",
+    badge: "Quick Kickstart",
+    price: "$180",
+    period: "single campaign asset",
+    desc: "Ideal for launching a single marketing promo, educational carousel deck, or ad campaign needing scroll-stopping visual design.",
+    timeline: "2 – 3 Business Days",
+    features: [
+      "1x Instagram Carousel Deck (up to 7 Slides)",
+      "OR 4x Multi-Ratio Ad Banners (1:1, 9:16, 16:9)",
+      "Ready-to-Post High-Res PNG / JPG Files",
+      "PDF Master File for LinkedIn Carousels",
+      "Figma / Photoshop Editable Source File",
+      "2 Rounds of Included Revisions"
+    ],
+    ctaText: "Book Carousel / Ad Kit",
+    popular: false
+  },
+  {
+    name: "Monthly Brand Content Retainer",
+    badge: "Most Popular Growth",
+    price: "$480",
+    period: "per month",
+    desc: "Consistent monthly design output for growing brands, startup founders, and marketing agencies needing regular high-converting graphics.",
+    timeline: "48-Hour Task Delivery",
+    features: [
+      "4x Full Carousel Decks (up to 30 Slides total)",
+      "OR 16x Custom Social Graphics / Ad Banners",
+      "LinkedIn Cover & Profile Branding Setup",
+      "Brand Style Guide Alignment & Templates",
+      "Direct WhatsApp / Slack Communication",
+      "Priority Queue & Unlimited Revisions"
+    ],
+    ctaText: "Start Monthly Content Retainer",
+    popular: true
+  },
+  {
+    name: "Full Brand Identity Master Kit",
+    badge: "Complete Brand System",
+    price: "$650",
+    period: "one-time brand package",
+    desc: "Comprehensive brand identity system for new businesses or rebranding projects needing a professional, unified visual presence.",
+    timeline: "5 – 7 Business Days",
+    features: [
+      "Custom Primary & Secondary Vector Logo Marks",
+      "Icon Favicon & Sub-mark Variations",
+      "Brand Color Palette (HEX, RGB, CMYK)",
+      "Typography Pairings & Font Usage Hierarchy",
+      "Complete Brand Style Guide PDF Document",
+      "Social Media Banner & Avatar Master Assets"
+    ],
+    ctaText: "Choose Brand Identity Kit",
+    popular: false
+  }
+];
+---
+
+<section id="pricing" class="py-20 md:py-28 relative bg-zinc-100/60 dark:bg-zinc-950/60 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-3">
+        TRANSPARENT CREATIVE PRICING
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Simple Packages for <span class="text-gradient">Social Media & Brand Design</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Predictable pricing, editable source files, and guaranteed fast turnaround times.
+      </p>
+    </div>
+
+    <!-- 3 Pricing Cards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      {packages.map((item) => (
+        <div class={`relative flex flex-col justify-between p-8 rounded-3xl transition-all duration-300 ${
+          item.popular
+            ? 'bg-white dark:bg-zinc-900 border-2 border-purple-500 shadow-2xl shadow-purple-500/10 scale-100 lg:-translate-y-2'
+            : 'bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-lg hover:shadow-xl'
+        }`}>
+          
+          <!-- Popular Badge Tag -->
+          {item.popular && (
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-extrabold uppercase tracking-wider shadow-md">
+              ★ Recommended Choice
+            </div>
+          )}
+
+          <div>
+            <!-- Card Header: Title & Badge -->
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-display text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                {item.name}
+              </h3>
+              <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                {item.badge}
+              </span>
+            </div>
+
+            <!-- Price Display -->
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="font-display text-4xl sm:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">
+                {item.price}
+              </span>
+              <span class="text-xs text-zinc-500 font-semibold">/{item.period}</span>
+            </div>
+
+            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+
+            <!-- Timeline Pill -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/60 dark:border-zinc-800 text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-6">
+              <span class="text-purple-500">⏱</span>
+              <span>Estimated Delivery: <strong>{item.timeline}</strong></span>
+            </div>
+
+            <!-- Features List -->
+            <div class="space-y-3 mb-8">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Package Includes:</p>
+              {item.features.map((feat) => (
+                <div class="flex items-start gap-2.5 text-xs font-medium text-zinc-700 dark:text-zinc-300">
+                  <span class="text-purple-600 dark:text-purple-400 font-bold mt-0.5">✓</span>
+                  <span>{feat}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a
+            href="#contact"
+            class={`w-full py-3.5 px-6 rounded-xl text-center text-sm font-bold transition-all duration-300 ${
+              item.popular
+                ? 'text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40'
+                : 'text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 hover:bg-brand-500 hover:text-white dark:hover:bg-brand-500'
+            }`}
+          >
+            {item.ctaText} ↗
+          </a>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Assurance Banner -->
+    <div class="mt-12 p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-3 text-sm text-zinc-700 dark:text-zinc-300">
+        <span class="text-xl">🎨</span>
+        <span>Need a custom batch of social graphics or specialized ad banners? <strong>Let's tailor a specific design package for your team.</strong></span>
+      </div>
+      <a
+        href="#contact"
+        class="px-5 py-2.5 rounded-xl text-xs font-bold text-purple-600 dark:text-purple-400 bg-purple-500/10 border border-purple-500/20 hover:bg-purple-600 hover:text-white transition-all whitespace-nowrap"
+      >
+        Request Custom Package
+      </a>
+    </div>
+
+  </div>
+</section>

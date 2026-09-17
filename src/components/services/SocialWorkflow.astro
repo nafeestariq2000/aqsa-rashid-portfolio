@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Brand Audit & Visual Strategy",
+    icon: "🔍",
+    desc: "We analyze your audience demographics, brand values, and competitor visual assets to create a moodboard and custom color palette.",
+    deliverable: "Visual Moodboard & Style Direction"
+  },
+  {
+    step: "02",
+    title: "Content Outline & Hook Copywriting",
+    icon: "✍️",
+    desc: "Structuring slide-by-slide headlines, engaging hook copy, and clear call-to-action endings designed to drive viewer interaction.",
+    deliverable: "Slide-by-Slide Content Copy Deck"
+  },
+  {
+    step: "03",
+    title: "High-Fidelity Layout & Graphics",
+    icon: "🎨",
+    desc: "Designing seamless carousel slide flows, custom vector illustrations, high-contrast typography, and brand-aligned visual assets.",
+    deliverable: "Master Figma & Illustrator Artboards"
+  },
+  {
+    step: "04",
+    title: "Multi-Format Export & Asset Pack",
+    icon: "📦",
+    desc: "Delivering ready-to-post 1080x1350 PNG/JPG graphics, LinkedIn PDF carousel decks, ad banner variations, and editable source files.",
+    deliverable: "Ready-to-Post Asset Bundle & Source Files"
+  }
+];
+---
+
+<section id="workflow" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-3">
+        CREATIVE PROCESS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        A High-Impact <span class="text-gradient">4-Step Visual Branding Workflow</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        From audience research and hook copywriting to pixel-perfect asset exports.
+      </p>
+    </div>
+
+    <!-- 4-Step Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((item) => (
+        <div class="group relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-purple-500/50 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          
+          <div>
+            <!-- Header Row: Step Number & Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display text-3xl font-extrabold text-purple-500/30 group-hover:text-purple-500 transition-colors">
+                {item.step}
+              </span>
+              <span class="text-2xl p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800">
+                {item.icon}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Bottom Deliverable Tag -->
+          <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-1">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400">Phase Milestone:</span>
+            <span class="text-xs font-bold text-purple-600 dark:text-purple-400">{item.deliverable}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
