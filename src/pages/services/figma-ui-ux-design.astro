@@ -5,6 +5,8 @@ import FigmaHero from '../../components/services/FigmaHero.astro';
 import FigmaDeliverables from '../../components/services/FigmaDeliverables.astro';
 import FigmaWorkflow from '../../components/services/FigmaWorkflow.astro';
 import FigmaPricing from '../../components/services/FigmaPricing.astro';
+import FigmaFAQ from '../../components/services/FigmaFAQ.astro';
+import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
 
 const breadcrumbSchema = JSON.stringify({
@@ -54,6 +56,12 @@ const breadcrumbSchema = JSON.stringify({
 
     <!-- Section 4: Transparent Pricing Packages -->
     <FigmaPricing />
+
+    <!-- Section 5: Figma Service FAQ -->
+    <FigmaFAQ />
+
+    <!-- Section 6: Direct Contact Form & Booking -->
+    <Contact />
   </main>
 
   <Footer />

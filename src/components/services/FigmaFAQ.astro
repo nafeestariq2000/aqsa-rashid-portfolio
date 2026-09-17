@@ -1,0 +1,111 @@
+---
+const faqs = [
+  {
+    q: "What design files and deliverables do I receive upon completion?",
+    a: "You receive full edit ownership of the organized master Figma file (.fig), complete with Desktop (1440px), Tablet (768px), and Mobile (375px) artboards, reusable component variants, interactive click-through prototype links, and exported WebP/SVG assets."
+  },
+  {
+    q: "What is the difference between low-fidelity wireframes and high-fidelity UI?",
+    a: "Wireframes focus strictly on page architecture, visual hierarchy, and CTA placement using simple grayscale shapes. High-fidelity UI adds typography, color palettes, custom illustrations, responsive auto-layout rules, and polished brand visuals."
+  },
+  {
+    q: "Can you convert these Figma designs into a live Webflow website?",
+    a: "Absolutely! I specialize in clean, manual Figma-to-Webflow development using Client-First class naming rules. You can add custom Webflow build and CMS setup to any Figma design package."
+  },
+  {
+    q: "How many rounds of revisions are included with my design package?",
+    a: "All Figma design packages include 2 complete rounds of revisions during both the wireframe and high-fidelity stages to guarantee the final layout meets your expectations."
+  }
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<!-- Embed FAQ Schema -->
+<script type="application/ld+json" set:html={faqSchema}></script>
+
+<section id="faq" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">
+        SERVICE FREQUENTLY ASKED QUESTIONS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Figma UI/UX <span class="text-gradient">Questions Answered</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Everything you need to know about Figma design deliverables, timelines, and revisions.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4" id="figma-faq-accordion">
+      {faqs.map((item) => (
+        <div class="faq-item rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 overflow-hidden shadow-sm transition-all duration-300">
+          
+          <button
+            class="faq-trigger w-full p-6 flex items-center justify-between text-left focus:outline-none group"
+            aria-expanded="false"
+          >
+            <span class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors pr-4">
+              {item.q}
+            </span>
+            <div class="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 group-hover:text-brand-500 transition-all transform duration-300 faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+          </button>
+
+          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed border-t border-zinc-100 dark:border-zinc-800/60 pt-4">
+            {item.a}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Accordion Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('#figma-faq-accordion .faq-item');
+
+    items.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = content.classList.contains('hidden');
+
+        // Close all other items
+        items.forEach(otherItem => {
+          otherItem.querySelector('.faq-content').classList.add('hidden');
+          otherItem.querySelector('.faq-icon').classList.remove('rotate-180', 'text-brand-500');
+          otherItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180', 'text-brand-500');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+</script>
