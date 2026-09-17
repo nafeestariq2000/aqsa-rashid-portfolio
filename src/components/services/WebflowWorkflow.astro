@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Figma File Audit & Style Guide Setup",
+    icon: "⚙️",
+    desc: "We audit your Figma file, map design tokens, and establish a global Webflow style guide page with Client-First typography and color variables.",
+    deliverable: "Global Webflow Style Guide"
+  },
+  {
+    step: "02",
+    title: "HTML5 Layout & Responsive Build",
+    icon: "🏗️",
+    desc: "Building semantically clean HTML page structures and configuring fluid breakpoints for Desktop, Tablet, and Mobile Portrait screens.",
+    deliverable: "Pixel-Perfect Webflow Layout"
+  },
+  {
+    step: "03",
+    title: "CMS Schema & Custom Interactions",
+    icon: "⚡",
+    desc: "Setting up Webflow CMS databases for blogs and portfolio projects, then adding smooth hover states, scroll triggers, and mobile menus.",
+    deliverable: "Custom CMS & IX2 Animations"
+  },
+  {
+    step: "04",
+    title: "Speed Audit, Domain & Video Handoff",
+    icon: "🚀",
+    desc: "Testing page speed scores (100/100 Core Web Vitals), configuring custom domains/SSL, and providing a video tutorial for client editing.",
+    deliverable: "Live Website & Loom Walkthrough"
+  }
+];
+---
+
+<section id="workflow" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-3">
+        THE BUILD PROCESS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        A Systematic <span class="text-gradient">4-Step Figma-to-Webflow Workflow</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        From design token mapping to page speed optimization and domain launch.
+      </p>
+    </div>
+
+    <!-- 4-Step Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((item) => (
+        <div class="group relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-blue-500/50 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          
+          <div>
+            <!-- Header Row: Step Number & Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display text-3xl font-extrabold text-blue-500/30 group-hover:text-blue-500 transition-colors">
+                {item.step}
+              </span>
+              <span class="text-2xl p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800">
+                {item.icon}
+              </span>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+              {item.desc}
+            </p>
+          </div>
+
+          <!-- Bottom Deliverable Tag -->
+          <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-1">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400">Phase Milestone:</span>
+            <span class="text-xs font-bold text-blue-600 dark:text-blue-400">{item.deliverable}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
