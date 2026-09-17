@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import SaaSVideoHero from '../../components/work/SaaSVideoHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Selected Work",
+      "item": "https://aqsarashid.com/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SaaS Video Editor UI Case Study",
+      "item": "https://aqsarashid.com/work/saas-video-landing-page/"
+    }
+  ]
+});
+
+const caseStudySchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Create Video Instantly — AI SaaS Video Editor Landing Page UI",
+  "author": {
+    "@type": "Person",
+    "name": "Aqsa Rashid"
+  },
+  "headline": "Redesigning an AI SaaS Landing Page to Boost Free Trial Conversions by +35%",
+  "about": "Figma Web UI/UX Design & Landing Page Optimization Case Study",
+  "genre": "UI/UX Design Case Study"
+});
+---
+
+<Layout
+  title="SaaS Video Editor UI Case Study | Figma Landing Page Redesign — Aqsa Rashid"
+  description="Explore the UI/UX case study for AI Video Startup CreateVideo Instantly. Discover how Google UX principles, wireframing, and Figma design systems drove +35% higher conversions."
+>
+  <!-- Embed Schema Markup -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+  <script type="application/ld+json" set:html={caseStudySchema}></script>
+
+  <Header />
+  
+  <main class="flex-grow">
+    <!-- Section 1: Hero Banner & Case Study Overview -->
+    <SaaSVideoHero />
+  </main>
+
+  <Footer />
+</Layout>
