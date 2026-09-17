@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import FigmaHero from '../../components/services/FigmaHero.astro';
 import FigmaDeliverables from '../../components/services/FigmaDeliverables.astro';
 import FigmaWorkflow from '../../components/services/FigmaWorkflow.astro';
+import FigmaPricing from '../../components/services/FigmaPricing.astro';
 import Footer from '../../components/Footer.astro';
 
 const breadcrumbSchema = JSON.stringify({
@@ -50,6 +51,9 @@ const breadcrumbSchema = JSON.stringify({
 
     <!-- Section 3: 4-Step Google UX Workflow -->
     <FigmaWorkflow />
+
+    <!-- Section 4: Transparent Pricing Packages -->
+    <FigmaPricing />
   </main>
 
   <Footer />
