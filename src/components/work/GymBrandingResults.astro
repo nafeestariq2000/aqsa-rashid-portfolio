@@ -23,34 +23,34 @@ const metrics = [
 ];
 ---
 
-<section id="results" class="py-24 md:py-32 relative bg-white dark:bg-zinc-900 border-t border-zinc-200/80 dark:border-zinc-800 transition-colors duration-300">
+<section id="results" class="pt-24 pb-28 md:pt-32 md:pb-40 lg:pt-36 lg:pb-44 relative bg-[#f8f9fc] dark:bg-[#0d0e11] border-t border-zinc-200/80 dark:border-zinc-800 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
-    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 md:mb-20">
       <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">
         CAMPAIGN IMPACT & METRICS
       </span>
       <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
         Measurable Growth Through <span class="text-gradient">Strategic Visuals</span>.
       </h2>
-      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
         How brand consistency, high contrast, and structured carousels converted passive scrollers into paying members.
       </p>
     </div>
 
-    <!-- Metrics Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+    <!-- Metrics Grid with Generous Bottom Margin -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-20 md:mb-28">
       {metrics.map((m) => (
-        <div class="p-8 rounded-3xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/60 flex flex-col justify-between hover:border-brand-500/40 transition-all duration-300">
+        <div class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-brand-500/40">
           <div>
-            <div class="font-display text-3xl sm:text-4xl font-extrabold text-brand-600 dark:text-brand-400 mb-2">
+            <div class="font-display text-3xl sm:text-4xl font-extrabold text-brand-600 dark:text-brand-400 mb-3">
               {m.value}
             </div>
             <div class="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-2">
               {m.label}
             </div>
-            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
               {m.desc}
             </p>
           </div>
@@ -58,36 +58,36 @@ const metrics = [
       ))}
     </div>
 
-    <!-- Client Testimonial Card (Breathable & High Contrast) -->
-    <div class="max-w-4xl mx-auto">
-      <div class="p-8 sm:p-12 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xl relative overflow-hidden">
+    <!-- Client Testimonial Card (Luxuriously Breathable with Distinct Top Separation) -->
+    <div class="max-w-5xl mx-auto mt-20 md:mt-28">
+      <div class="p-10 sm:p-14 lg:p-16 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xl relative overflow-hidden">
         <!-- Background Subtle Glow -->
         <div class="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative z-10">
-          <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
-            <div class="flex items-center gap-1 text-amber-400 text-lg">
+          <div class="flex items-center justify-between flex-wrap gap-4 mb-8">
+            <div class="flex items-center gap-1.5 text-amber-400 text-xl">
               ★ ★ ★ ★ ★
             </div>
-            <div class="px-3.5 py-1 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-600 dark:text-amber-400">
+            <div class="px-4 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-600 dark:text-amber-400">
               Verified Client Review ✓
             </div>
           </div>
 
-          <blockquote class="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed mb-8 text-zinc-800 dark:text-zinc-200 italic">
+          <blockquote class="text-lg sm:text-2xl md:text-3xl font-medium leading-relaxed mb-10 text-zinc-800 dark:text-zinc-200 italic">
             "Aqsa transformed Apex Fitness from just another local gym page into a recognized brand on Instagram. Her carousel templates and high-contrast color scheme completely elevated our reach. We generated over 140 direct member leads in the first month alone!"
           </blockquote>
 
-          <div class="flex items-center gap-4 pt-6 border-t border-zinc-100 dark:border-zinc-800">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-brand-500 text-white font-extrabold flex items-center justify-center text-lg shadow-md">
+          <div class="flex items-center gap-4 pt-8 border-t border-zinc-100 dark:border-zinc-800">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-brand-500 text-white font-extrabold flex items-center justify-center text-xl shadow-md">
               MR
             </div>
             <div>
-              <div class="font-display font-bold text-base text-zinc-900 dark:text-zinc-100">
+              <div class="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100">
                 Marcus Vance
               </div>
-              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+              <div class="text-sm text-zinc-500 dark:text-zinc-400">
                 Founder & Head Coach, Apex Fitness Club
               </div>
             </div>
