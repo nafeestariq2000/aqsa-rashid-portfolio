@@ -9,4 +9,6 @@ dist/
 .DS_Store
 Thumbs.db
 *.zip
+scratch/
+Portfolio/
 

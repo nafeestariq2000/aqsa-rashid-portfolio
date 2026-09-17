@@ -1,0 +1,78 @@
+---
+const skillCategories = [
+  {
+    category: "Web UI/UX Design",
+    icon: "🎨",
+    badge: "Core Specialty",
+    skills: ["Figma (Auto-Layout 5.0)", "Wireframing & Prototyping", "User Personas & Journey Mapping", "Design Systems & Token Architecture", "Mobile App & Responsive Layouts"]
+  },
+  {
+    category: "Webflow Development",
+    icon: "⚡",
+    badge: "Front-End Build",
+    skills: ["Figma to Webflow Conversion", "Client-First CSS Architecture", "Webflow CMS Collections", "Custom Micro-Interactions & Animations", "SEO & Core Web Vitals Optimization"]
+  },
+  {
+    category: "Social Media & Visual Brand",
+    icon: "📱",
+    badge: "Brand Identity",
+    skills: ["Instagram Carousel Decks (1080x1350)", "Meta & Google Ad Creatives", "Outdoor Billboard & Metal Frame Mockups", "Brand Style Guides & Typography Kits", "Adobe Photoshop & Illustrator"]
+  },
+  {
+    category: "Technical & SEO Standards",
+    icon: "🛠️",
+    badge: "Quality Assurance",
+    skills: ["100/100 Google Lighthouse Performance", "Schema Markup (JSON-LD)", "Fluid Responsive Breakpoints (375-1440px)", "WCAG Accessibility Compliance", "Cross-Browser Testing"]
+  }
+];
+---
+
+<section id="skills" class="py-24 md:py-32 relative bg-zinc-100/60 dark:bg-zinc-950/60 border-t border-zinc-200/80 dark:border-zinc-800 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">
+        SKILLS & TOOLING MATRIX
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Specialized Design & <span class="text-gradient">Development Stack</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        Equipped with industry-standard software, methodologies, and technical performance standards.
+      </p>
+    </div>
+
+    <!-- 4-Category Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {skillCategories.map((item) => (
+        <div class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-lg flex flex-col justify-between hover:border-brand-500/40 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl p-2.5 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
+                  {item.icon}
+                </span>
+                <h3 class="font-display text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                  {item.category}
+                </h3>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                {item.badge}
+              </span>
+            </div>
+
+            <div class="space-y-3">
+              {item.skills.map((sk) => (
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/60 dark:border-zinc-700/60 text-xs sm:text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                  <span class="text-brand-600 dark:text-brand-400 font-bold">✓</span> {sk}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

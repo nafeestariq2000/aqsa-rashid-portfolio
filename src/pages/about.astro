@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import AboutHero from '../components/about/AboutHero.astro';
+import AboutPhilosophy from '../components/about/AboutPhilosophy.astro';
+import AboutSkills from '../components/about/AboutSkills.astro';
+import AboutMilestones from '../components/about/AboutMilestones.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aqsarashid.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Aqsa Rashid",
+      "item": "https://aqsarashid.com/about/"
+    }
+  ]
+});
+
+const profileSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Aqsa Rashid",
+    "jobTitle": "Google Certified Web UI/UX Designer & Webflow Developer",
+    "description": "Google UX certified Web UI/UX designer & Figma specialist. Crafting clean, high-converting landing pages, Webflow sites, & social media graphics.",
+    "email": "mailto:hi.aqsarashid@gmail.com",
+    "url": "https://aqsarashid.com/about/",
+    "image": "https://aqsarashid.com/images/portfolio/cover-aetherfield.png"
+  }
+});
+---
+
+<Layout
+  title="About Aqsa Rashid | Google Certified Web UI/UX Designer & Webflow Developer"
+  description="Learn about Aqsa Rashid, a Google UX Certified Web UI/UX Designer and Webflow Developer based in Karachi. Discover her design philosophy, skills matrix, and global track record."
+>
+  <!-- Embed Schema Markup -->
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+  <script type="application/ld+json" set:html={profileSchema}></script>
+
+  <Header />
+  
+  <main class="flex-grow">
+    <!-- Section 1: Hero Banner & Bio Overview -->
+    <AboutHero />
+
+    <!-- Section 2: Design Philosophy & 4-Step Workflow -->
+    <AboutPhilosophy />
+
+    <!-- Section 3: Specialized Skills & Software Toolkit Matrix -->
+    <AboutSkills />
+
+    <!-- Section 4: Global Milestones & Client Track Record -->
+    <AboutMilestones />
+
+    <!-- Section 5: Contact CTA -->
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>
