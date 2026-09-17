@@ -5,6 +5,8 @@ import SocialHero from '../../components/services/SocialHero.astro';
 import SocialDeliverables from '../../components/services/SocialDeliverables.astro';
 import SocialWorkflow from '../../components/services/SocialWorkflow.astro';
 import SocialPricing from '../../components/services/SocialPricing.astro';
+import SocialFAQ from '../../components/services/SocialFAQ.astro';
+import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
 
 const breadcrumbSchema = JSON.stringify({
@@ -54,6 +56,12 @@ const breadcrumbSchema = JSON.stringify({
 
     <!-- Section 4: Social Media Pricing Packages -->
     <SocialPricing />
+
+    <!-- Section 5: Branding Service FAQ -->
+    <SocialFAQ />
+
+    <!-- Section 6: Direct Contact Form & Booking -->
+    <Contact />
   </main>
 
   <Footer />

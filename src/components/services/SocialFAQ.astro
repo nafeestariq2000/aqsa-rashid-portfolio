@@ -1,0 +1,111 @@
+---
+const faqs = [
+  {
+    q: "What file formats do I receive for Instagram carousels and social graphics?",
+    a: "You receive ready-to-post 1080x1350px high-resolution PNG/JPG graphics, multi-page PDF documents for LinkedIn carousels, multi-ratio ad formats (1:1, 9:16, 16:9), and fully editable Figma/PSD source files."
+  },
+  {
+    q: "Can you create custom graphics that strictly follow my existing brand guidelines?",
+    a: "Yes! I adhere strictly to your brand color hex codes, typography hierarchy, logo clear space rules, and brand identity to maintain complete visual consistency across all marketing channels."
+  },
+  {
+    q: "What is your typical turnaround time for a carousel deck or ad kit?",
+    a: "Single Instagram carousel decks (up to 7 slides) or promotional ad kits are typically delivered within 2 to 3 business days, including 2 rounds of feedback and revisions."
+  },
+  {
+    q: "What details do I need to share before starting a social design project?",
+    a: "All I need is your vector logo file, brand colors/website URL, slide topic or text copy, and any visual inspiration or brand guidelines you have available."
+  }
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<!-- Embed FAQ Schema -->
+<script type="application/ld+json" set:html={faqSchema}></script>
+
+<section id="faq" class="py-20 md:py-28 relative bg-[#f8f9fc] dark:bg-[#0d0e11] transition-colors duration-300">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-3">
+        BRANDING FREQUENTLY ASKED QUESTIONS
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-zinc-100 leading-tight mb-4">
+        Social Media & Brand <span class="text-gradient">Questions Answered</span>.
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        Everything you need to know about carousel formats, brand guidelines, turnaround times, and source files.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4" id="social-faq-accordion">
+      {faqs.map((item) => (
+        <div class="faq-item rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 overflow-hidden shadow-sm transition-all duration-300">
+          
+          <button
+            class="faq-trigger w-full p-6 flex items-center justify-between text-left focus:outline-none group"
+            aria-expanded="false"
+          >
+            <span class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors pr-4">
+              {item.q}
+            </span>
+            <div class="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 group-hover:text-purple-500 transition-all transform duration-300 faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+          </button>
+
+          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed border-t border-zinc-100 dark:border-zinc-800/60 pt-4">
+            {item.a}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Accordion Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('#social-faq-accordion .faq-item');
+
+    items.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = content.classList.contains('hidden');
+
+        // Close all other items
+        items.forEach(otherItem => {
+          otherItem.querySelector('.faq-content').classList.add('hidden');
+          otherItem.querySelector('.faq-icon').classList.remove('rotate-180', 'text-purple-500');
+          otherItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180', 'text-purple-500');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+</script>
