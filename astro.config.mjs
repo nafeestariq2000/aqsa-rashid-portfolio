@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://aqsarashid.com',
   base: '/',
+  trailingSlash: 'always',
   integrations: [tailwind()],
 });
 
