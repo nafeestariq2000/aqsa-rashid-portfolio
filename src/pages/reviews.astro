@@ -1,0 +1,503 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+
+const reviewsData = [
+  {
+    id: 1,
+    quote: "Aqsa is amazing! Really has integrity, honesty, and motivation to please her clients. I am a repeat customer, never disappointed! Thank you for your hard work!",
+    name: "Patricia B.",
+    initials: "PB",
+    tag: "Repeat Client",
+    category: "ui-ux",
+    categoryLabel: "Figma Web UI/UX",
+    rating: 5,
+    isRepeat: true
+  },
+  {
+    id: 2,
+    quote: "Great service, communication and delivery, beyond my expectations and highly recommend.",
+    name: "Stareena",
+    initials: "S",
+    tag: "Webflow Project",
+    category: "webflow",
+    categoryLabel: "Figma to Webflow",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 3,
+    quote: "Always very polite, professional, reliable and delivers high quality and exceptional work.",
+    name: "D. Bennett",
+    initials: "DB",
+    tag: "4x Repeat Client",
+    category: "brand",
+    categoryLabel: "Brand & Graphic Assets",
+    rating: 5,
+    isRepeat: true
+  },
+  {
+    id: 4,
+    quote: "This is the second time I work with Aqsa and as in the previous time, I’m very happy and satisfied with her work! 100% recommendable.",
+    name: "Karlabs",
+    initials: "K",
+    tag: "Repeat Client",
+    category: "brand",
+    categoryLabel: "Brand & Graphic Assets",
+    rating: 5,
+    isRepeat: true
+  },
+  {
+    id: 5,
+    quote: "The designer was quick, prompt, and very good at listening to directions. They nailed the task, love the design. I highly recommend.",
+    name: "Stock Your Home",
+    initials: "SY",
+    tag: "Corporate Brand",
+    category: "ui-ux",
+    categoryLabel: "Figma Web UI/UX",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 6,
+    quote: "We are more than thrilled with the result and we find the collaboration with Aqsa very positive. We would highly recommend her at any time.",
+    name: "Tobol B.",
+    initials: "TB",
+    tag: "Repeat Client",
+    category: "brand",
+    categoryLabel: "Brand & Graphic Assets",
+    rating: 5,
+    isRepeat: true
+  },
+  {
+    id: 7,
+    quote: "I had an amazing experience. She is very patient and understanding. She came up with a beautiful visual identity for me. I am very satisfied.",
+    name: "Lay Rose Gold",
+    initials: "LR",
+    tag: "Brand Identity",
+    category: "brand",
+    categoryLabel: "Brand & Graphic Assets",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 8,
+    quote: "Amazing designer, patient, and extremely skillful! Understood the vision right from the start.",
+    name: "Asha C.",
+    initials: "AC",
+    tag: "Verified Client",
+    category: "ui-ux",
+    categoryLabel: "Figma Web UI/UX",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 9,
+    quote: "This seller is amazing. Great communication and the work is awesome. Exceeded expectations!",
+    name: "Brittany T.",
+    initials: "BT",
+    tag: "Verified Client",
+    category: "ui-ux",
+    categoryLabel: "Figma Web UI/UX",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 10,
+    quote: "Very good at communicating and working with you to make sure the final product is perfect.",
+    name: "Jhonatan P.",
+    initials: "JP",
+    tag: "Webflow & UI",
+    category: "webflow",
+    categoryLabel: "Figma to Webflow",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 11,
+    quote: "Aqsa is very talented and extremely flexible... Took this project and exceeded in creativity.",
+    name: "Susan E.",
+    initials: "SE",
+    tag: "Creative Director",
+    category: "ui-ux",
+    categoryLabel: "Figma Web UI/UX",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 12,
+    quote: "Great to work with, helped us out within hours! Polite, professional and patient. Highly recommend!",
+    name: "Dolezsar D.",
+    initials: "DD",
+    tag: "Express Delivery",
+    category: "brand",
+    categoryLabel: "Brand & Graphic Assets",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 13,
+    quote: "Great and fast work. She really understands what you want and executes it flawlessly.",
+    name: "Jesper W.",
+    initials: "JW",
+    tag: "Webflow Build",
+    category: "webflow",
+    categoryLabel: "Figma to Webflow",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 14,
+    quote: "Fast delivery & incorporated everything I wanted smoothly. Will definitely hire again.",
+    name: "Charlene M.",
+    initials: "CM",
+    tag: "Verified Client",
+    category: "ui-ux",
+    categoryLabel: "Figma Web UI/UX",
+    rating: 5,
+    isRepeat: false
+  },
+  {
+    id: 15,
+    quote: "Goes above and beyond! Always delivers top quality work ahead of the scheduled deadline.",
+    name: "Craig A.",
+    initials: "CA",
+    tag: "Repeat Client",
+    category: "brand",
+    categoryLabel: "Brand & Graphic Assets",
+    rating: 5,
+    isRepeat: true
+  },
+  {
+    id: 16,
+    quote: "Fixed issues on our page promptly and followed instructions perfectly. All well executed.",
+    name: "Goetzwell",
+    initials: "G",
+    tag: "Webflow Project",
+    category: "webflow",
+    categoryLabel: "Figma to Webflow",
+    rating: 5,
+    isRepeat: false
+  }
+];
+
+const stats = [
+  { value: "5.0", label: "Overall Rating", subtext: "From 50+ Verified Contracts", icon: "⭐" },
+  { value: "100%", label: "On-Time Delivery", subtext: "Zero Missed Deadlines", icon: "⚡" },
+  { value: "98%", label: "Repeat & Referral Rate", subtext: "High Client Retention", icon: "🤝" },
+  { value: "50+", label: "Projects Completed", subtext: "Global Brands & SaaS", icon: "🚀" }
+];
+
+const relatedLinks = [
+  {
+    title: "Services & Pricing Hub",
+    subtitle: "Compare Web UI/UX design, Figma to Webflow, and social media branding packages.",
+    url: `${import.meta.env.BASE_URL}services/`,
+    badge: "Services Hub",
+    icon: "🚀"
+  },
+  {
+    title: "Selected Case Studies",
+    subtitle: "Explore real portfolio work for SaaS platforms, solar systems, and fitness brands.",
+    url: `${import.meta.env.BASE_URL}#work`,
+    badge: "Case Studies",
+    icon: "📁"
+  },
+  {
+    title: "About Aqsa Rashid",
+    subtitle: "Learn about Aqsa's Google UX certifications, design philosophy, and track record.",
+    url: `${import.meta.env.BASE_URL}about/`,
+    badge: "About Profile",
+    icon: "🎓"
+  }
+];
+
+// Rich Snippet JSON-LD AggregateRating Schema
+const reviewSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Aqsa Rashid — Web UI/UX Design & Webflow Development Services",
+  "description": "Verified client reviews and 5-star ratings for Aqsa Rashid across Web UI/UX design, Figma to Webflow builds, and brand graphics.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": reviewsData.map((r) => ({
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": r.rating.toString(),
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": r.name
+    },
+    "reviewBody": r.quote
+  }))
+});
+---
+
+<Layout
+  title="Client Reviews & Testimonials | Aqsa Rashid — Web UI/UX & Webflow Specialist"
+  description="Read 100% verified client reviews and 5.0 ★ ratings for Aqsa Rashid. Discover feedback from SaaS founders, agencies, and brands on Web UI/UX design and Webflow builds."
+>
+  <!-- Embed JSON-LD Schema Markup -->
+  <script type="application/ld+json" set:html={reviewSchema}></script>
+
+  <Header />
+
+  <main class="pt-28 pb-20 overflow-hidden">
+    
+    <!-- Hero Header Section -->
+    <section class="relative py-12 md:py-16 bg-gradient-to-b from-zinc-900/50 via-zinc-950 to-zinc-950 dark:from-zinc-900/50 dark:via-zinc-950 dark:to-zinc-950 light:from-zinc-100 light:via-zinc-50 light:to-zinc-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-6">
+          <span>✨</span>
+          <span>VERIFIED CLIENT REVIEWS & FEEDBACK</span>
+        </span>
+
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+          Trusted by Founders & Product Teams <span class="text-gradient">Worldwide</span>.
+        </h1>
+
+        <p class="text-base sm:text-lg lg:text-xl text-zinc-400 dark:text-zinc-400 light:text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed mb-12">
+          100% authentic feedback from client collaborations across Web UI/UX design, Webflow development, and digital brand design contracts.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+          {stats.map((stat) => (
+            <div class="p-5 sm:p-6 rounded-3xl bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-white border border-zinc-800/90 dark:border-zinc-800/90 light:border-zinc-200 shadow-xl flex flex-col items-center justify-center text-center">
+              <span class="text-2xl mb-2">{stat.icon}</span>
+              <span class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 tracking-tight">
+                {stat.value}
+              </span>
+              <span class="text-xs sm:text-sm font-bold text-zinc-300 dark:text-zinc-300 light:text-zinc-700 mt-1">
+                {stat.label}
+              </span>
+              <span class="text-[11px] text-zinc-500 dark:text-zinc-500 light:text-zinc-400 mt-0.5 font-normal">
+                {stat.subtext}
+              </span>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Main Reviews Directory Section -->
+    <section class="py-12 sm:py-16 bg-zinc-950 dark:bg-zinc-950 light:bg-zinc-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Category Filter Tabs Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="filter-bar">
+          <button
+            data-filter="all"
+            class="filter-btn active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 bg-brand-500 text-white shadow-lg shadow-brand-500/25"
+          >
+            All Reviews ({reviewsData.length})
+          </button>
+
+          <button
+            data-filter="ui-ux"
+            class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 hover:text-brand-400 hover:border-brand-500/40"
+          >
+            Figma Web UI/UX ({reviewsData.filter(r => r.category === 'ui-ux').length})
+          </button>
+
+          <button
+            data-filter="webflow"
+            class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 hover:text-brand-400 hover:border-brand-500/40"
+          >
+            Figma to Webflow ({reviewsData.filter(r => r.category === 'webflow').length})
+          </button>
+
+          <button
+            data-filter="brand"
+            class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 hover:text-brand-400 hover:border-brand-500/40"
+          >
+            Brand & Graphic Assets ({reviewsData.filter(r => r.category === 'brand').length})
+          </button>
+
+          <button
+            data-filter="repeat"
+            class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 hover:text-brand-400 hover:border-brand-500/40"
+          >
+            Repeat Clients ({reviewsData.filter(r => r.isRepeat).length})
+          </button>
+        </div>
+
+        <!-- Reviews Masonry / Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="reviews-grid">
+          {reviewsData.map((item) => (
+            <div
+              class="review-card relative p-8 rounded-3xl bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-white border border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 shadow-xl flex flex-col justify-between hover:border-brand-500/50 hover:-translate-y-1 transition-all duration-300"
+              data-category={item.category}
+              data-is-repeat={item.isRepeat ? "true" : "false"}
+            >
+              
+              <div>
+                <!-- Rating Stars & Tag Badge -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-1 text-amber-400 text-lg">
+                    ★★★★★
+                  </div>
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                    {item.tag}
+                  </span>
+                </div>
+
+                <!-- Testimonial Quote -->
+                <p class="text-sm text-zinc-300 dark:text-zinc-300 light:text-zinc-700 leading-relaxed italic mb-8 font-normal">
+                  "{item.quote}"
+                </p>
+              </div>
+
+              <!-- Client Info Footer -->
+              <div class="pt-6 border-t border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-100 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 via-brand-500 to-amber-500 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-zinc-100 dark:text-zinc-100 light:text-zinc-900">
+                      {item.name}
+                    </h3>
+                  </div>
+                </div>
+
+                <span class="text-xs font-medium text-zinc-400 dark:text-zinc-400 light:text-zinc-500">
+                  {item.categoryLabel}
+                </span>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+        <!-- Trust Guarantee Banner -->
+        <div class="mt-16 p-8 rounded-3xl bg-zinc-900/60 dark:bg-zinc-900/60 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl shrink-0">
+              🛡️
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-bold text-zinc-100 dark:text-zinc-100 light:text-zinc-900">
+                100% Authentic Client Feedback Guarantee
+              </h3>
+              <p class="text-xs sm:text-sm text-zinc-400 dark:text-zinc-400 light:text-zinc-600 font-normal">
+                Every review represents a real project delivered with precision, clear communication, and Google UX design standards.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={`${import.meta.env.BASE_URL}contact/`}
+            class="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg shadow-brand-500/25 transition-all whitespace-nowrap inline-flex items-center gap-1.5 group"
+          >
+            <span>Start Your Project</span>
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Related Links / Next Steps -->
+    <RelatedLinks
+      heading="Explore Portfolio Work & Service Offerings"
+      subheading="Discover real case studies, service tier breakdowns, and Aqsa's background credentials."
+      links={relatedLinks}
+    />
+
+    <!-- Bottom Action CTA Banner -->
+    <section class="py-16 sm:py-20 bg-zinc-950 dark:bg-zinc-950 light:bg-zinc-100 border-t border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3 block">
+          READY TO WORK TOGETHER?
+        </span>
+
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 mb-4">
+          Let’s Build Something <span class="text-gradient">Extraordinary</span>.
+        </h2>
+
+        <p class="text-base sm:text-lg text-zinc-400 dark:text-zinc-400 light:text-zinc-600 mb-8 font-normal max-w-2xl mx-auto">
+          Whether you need a high-converting Figma web UI, a custom Figma to Webflow build, or visual brand assets, get a response within 24 hours.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={`${import.meta.env.BASE_URL}contact/`}
+            class="px-8 py-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all inline-flex items-center gap-2 group"
+          >
+            <span>Book a Scope Call</span>
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+            </svg>
+          </a>
+
+          <a
+            href={`${import.meta.env.BASE_URL}services/`}
+            class="px-8 py-4 rounded-xl text-sm font-bold text-zinc-300 dark:text-zinc-300 light:text-zinc-700 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 hover:text-brand-400 transition-all inline-flex items-center gap-2 group"
+          >
+            <span>View Services & Pricing</span>
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<!-- Client-side Category Filter Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const reviewCards = document.querySelectorAll('.review-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active tab button styles
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-brand-500', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+          b.classList.add('bg-zinc-900', 'text-zinc-300', 'border-zinc-800');
+        });
+
+        btn.classList.remove('bg-zinc-900', 'text-zinc-300', 'border-zinc-800');
+        btn.classList.add('bg-brand-500', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+
+        // Filter cards
+        reviewCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const isRepeat = card.getAttribute('data-is-repeat') === 'true';
+
+          if (filter === 'all') {
+            (card as HTMLElement).style.display = 'flex';
+          } else if (filter === 'repeat') {
+            (card as HTMLElement).style.display = isRepeat ? 'flex' : 'none';
+          } else {
+            (card as HTMLElement).style.display = category === filter ? 'flex' : 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

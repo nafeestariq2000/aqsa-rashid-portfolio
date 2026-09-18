@@ -7,6 +7,7 @@ const pages = [
   { path: 'services/figma-ui-ux-design/', priority: '0.8', changefreq: 'monthly' },
   { path: 'services/figma-to-webflow/', priority: '0.8', changefreq: 'monthly' },
   { path: 'services/social-media-design/', priority: '0.8', changefreq: 'monthly' },
+  { path: 'reviews/', priority: '0.9', changefreq: 'weekly' },
   { path: 'work/saas-video-landing-page/', priority: '0.8', changefreq: 'monthly' },
   { path: 'work/solar-energy-website/', priority: '0.8', changefreq: 'monthly' },
   { path: 'work/fitness-social-media-branding/', priority: '0.8', changefreq: 'monthly' },
