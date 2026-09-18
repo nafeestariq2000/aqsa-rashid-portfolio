@@ -1,12 +1,16 @@
 ---
 ---
 
-<section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
-  <!-- Subtle Ambient Glow Effects -->
-  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-  <div class="absolute top-10 right-10 w-[300px] h-[300px] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-zinc-950 dark:bg-zinc-950 light:bg-zinc-50 transition-colors">
+  
+  <!-- Subtle Background Grid Pattern -->
+  <div class="absolute inset-0 bg-[radial-gradient(#3f3f46_1px,transparent_1px)] dark:bg-[radial-gradient(#3f3f46_1px,transparent_1px)] light:bg-[radial-gradient(#e4e4e7_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Subtle Ambient Glow Effects -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-brand-500/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+  <div class="absolute top-10 right-10 w-[350px] h-[350px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
       <!-- Left Column: Copy & Call To Action -->
@@ -18,33 +22,33 @@
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
           </span>
-          Available for Freelance & Remote Work
+          Available for New Projects & Remote Work
         </div>
 
         <!-- Main H1 Headline -->
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-[1.12] tracking-tight mb-6">
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900 leading-[1.08] tracking-tight mb-6">
           Designing Clean, Modern & <span class="text-gradient">High-Converting</span> Digital Experiences.
         </h1>
 
         <!-- Sub-headline / Value Motto -->
-        <p class="text-lg sm:text-xl text-zinc-400 dark:text-zinc-400 light:text-zinc-600 font-normal leading-relaxed mb-8 max-w-2xl">
-          Google UX Certified Web UI/UX Designer & Figma Specialist. Turning complex ideas into intuitive landing pages, responsive Webflow sites, and high-impact brand visual assets.
+        <p class="text-base sm:text-xl text-zinc-400 dark:text-zinc-400 light:text-zinc-600 font-normal leading-relaxed mb-8 max-w-2xl">
+          Google UX Certified Web UI/UX Designer & Webflow Specialist. Turning complex ideas into intuitive landing pages, responsive Webflow sites, and scalable design systems.
         </p>
 
         <!-- Credentials & Authority Strip -->
-        <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-10 text-xs sm:text-sm font-medium text-zinc-400 dark:text-zinc-400 light:text-zinc-600 border-l-2 border-brand-500/80 pl-4 py-1">
-          <div class="flex items-center gap-2">
-            <span class="text-brand-400 text-base">🎓</span>
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm font-medium">
+          <div class="px-3.5 py-1.5 rounded-full bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-zinc-200/80 border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 flex items-center gap-2">
+            <span class="text-brand-400 font-bold">🎓</span>
             <span>Google UX Certified</span>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-brand-400 text-base">🏛️</span>
+          <div class="px-3.5 py-1.5 rounded-full bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-zinc-200/80 border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 flex items-center gap-2">
+            <span class="text-brand-400 font-bold">🏛️</span>
             <span>Univ. of Colorado Boulder UX</span>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-amber-400 text-base">★</span>
-            <span class="text-zinc-200 dark:text-zinc-200 light:text-zinc-800 font-bold">5.0 Rating</span>
-            <span>(50+ Orders)</span>
+          <div class="px-3.5 py-1.5 rounded-full bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-zinc-200/80 border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 text-zinc-300 dark:text-zinc-300 light:text-zinc-700 flex items-center gap-2">
+            <span class="text-amber-400 font-bold">★</span>
+            <span class="text-zinc-100 dark:text-zinc-100 light:text-zinc-900 font-bold">5.0 Rating</span>
+            <span class="text-zinc-400 dark:text-zinc-400 light:text-zinc-500">(50+ Contracts)</span>
           </div>
         </div>
 
@@ -52,17 +56,22 @@
         <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
           <a
             href="#work"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
           >
-            View Selected Work
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            <span>View Selected Work</span>
+            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+            </svg>
           </a>
 
           <a
-            href="#contact"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-bold text-zinc-200 dark:text-zinc-200 light:text-zinc-800 bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-zinc-200/80 border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 hover:border-brand-500/50 hover:text-brand-400 transition-all duration-300"
+            href={`${import.meta.env.BASE_URL}contact/`}
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-zinc-200 dark:text-zinc-200 light:text-zinc-800 bg-zinc-900/80 dark:bg-zinc-900/80 light:bg-zinc-200/80 border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 hover:border-brand-500/50 hover:text-brand-400 transition-all duration-300 group"
           >
-            Book a Call ✉️
+            <span>Book a Scope Call</span>
+            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+            </svg>
           </a>
         </div>
 
@@ -72,26 +81,26 @@
       <div class="lg:col-span-5 relative flex items-center justify-center mt-6 lg:mt-0">
         
         <!-- UI Showcase Container Frame -->
-        <div class="relative w-full max-w-lg rounded-3xl bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-zinc-800 p-4 shadow-2xl shadow-brand-500/10 group">
+        <div class="relative w-full max-w-lg rounded-3xl bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-white border border-zinc-800/90 dark:border-zinc-800/90 light:border-zinc-200 p-4 shadow-2xl shadow-brand-500/10 group">
           
           <!-- Outer Ambient Glow -->
-          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-500 to-amber-400 opacity-15 blur-xl -z-10 group-hover:opacity-25 transition-opacity"></div>
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-500 via-brand-600 to-amber-500 opacity-20 blur-xl -z-10 group-hover:opacity-30 transition-opacity"></div>
           
           <!-- Top Browser / Figma Bar -->
-          <div class="flex items-center justify-between pb-3 mb-3 border-b border-zinc-100 dark:border-zinc-800">
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-100">
             <div class="flex items-center gap-1.5">
-              <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-              <span class="ml-2 text-xs font-mono text-zinc-500 dark:text-zinc-400">aetherfield_saas_ui.fig</span>
+              <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+              <span class="ml-2 text-xs font-mono text-zinc-400 dark:text-zinc-400 light:text-zinc-500">aetherfield_saas_ui.fig</span>
             </div>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20">
               Figma Design System
             </span>
           </div>
 
           <!-- UI Showcase Image Frame -->
-          <div class="relative rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 aspect-[4/3]">
+          <div class="relative rounded-2xl overflow-hidden border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 bg-zinc-950 dark:bg-zinc-950 light:bg-zinc-100 aspect-[4/3]">
             <img
               src={`${import.meta.env.BASE_URL}images/portfolio/cover-aetherfield.png`}
               alt="Aqsa Rashid - Google UX Certified UI/UX Designer Visual Showcase"
@@ -100,31 +109,31 @@
           </div>
 
           <!-- Floating Micro-Card 1: Completed Projects -->
-          <div class="absolute -top-4 -left-4 sm:-left-6 glass-card p-3 rounded-2xl shadow-xl shadow-black/30 flex items-center gap-3 border border-white/20 dark:border-zinc-700/50 animate-float">
+          <div class="absolute -top-4 -left-4 sm:-left-6 glass-card p-3 rounded-2xl shadow-xl shadow-black/40 flex items-center gap-3 border border-zinc-700/50 dark:border-zinc-700/50 light:border-zinc-200 animate-float">
             <div class="w-9 h-9 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-base font-bold shrink-0">
               🚀
             </div>
             <div>
-              <p class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Projects Delivered</p>
-              <p class="text-sm font-extrabold text-zinc-900 dark:text-zinc-100">50+ International</p>
+              <p class="text-xs font-semibold text-zinc-400 dark:text-zinc-400 light:text-zinc-500">Projects Delivered</p>
+              <p class="text-sm font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900">50+ International</p>
             </div>
           </div>
 
           <!-- Floating Micro-Card 2: Client Rating -->
-          <div class="absolute -bottom-4 -right-4 sm:-right-6 glass-card p-3 rounded-2xl shadow-xl shadow-black/30 flex items-center gap-3 border border-white/20 dark:border-zinc-700/50 animate-float" style="animation-delay: 1.5s;">
+          <div class="absolute -bottom-4 -right-4 sm:-right-6 glass-card p-3 rounded-2xl shadow-xl shadow-black/40 flex items-center gap-3 border border-zinc-700/50 dark:border-zinc-700/50 light:border-zinc-200 animate-float" style="animation-delay: 1.5s;">
             <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-base font-bold shrink-0">
               ★
             </div>
             <div>
-              <p class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Client Satisfaction</p>
-              <p class="text-sm font-extrabold text-zinc-900 dark:text-zinc-100">5.0 ★ (42+ Reviews)</p>
+              <p class="text-xs font-semibold text-zinc-400 dark:text-zinc-400 light:text-zinc-500">Client Satisfaction</p>
+              <p class="text-sm font-extrabold text-zinc-100 dark:text-zinc-100 light:text-zinc-900">5.0 ★ (42+ Reviews)</p>
             </div>
           </div>
 
           <!-- Floating Micro-Card 3: Google UX Badge -->
-          <div class="absolute bottom-10 -left-6 sm:-left-8 glass-card px-3.5 py-2 rounded-xl shadow-xl shadow-black/30 flex items-center gap-2 border border-white/20 dark:border-zinc-700/50">
+          <div class="absolute bottom-10 -left-6 sm:-left-8 glass-card px-3.5 py-2 rounded-xl shadow-xl shadow-black/40 flex items-center gap-2 border border-zinc-700/50 dark:border-zinc-700/50 light:border-zinc-200">
             <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
-            <span class="text-xs font-bold text-zinc-800 dark:text-zinc-200">Google UX Specialist</span>
+            <span class="text-xs font-bold text-zinc-200 dark:text-zinc-200 light:text-zinc-800">Google UX Specialist</span>
           </div>
 
         </div>
