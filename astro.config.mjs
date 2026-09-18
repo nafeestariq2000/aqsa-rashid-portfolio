@@ -3,8 +3,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nafeestariq2000.github.io',
-  base: '/aqsa-rashid-portfolio/',
+  site: 'https://aqsarashid.com',
+  base: '/',
   integrations: [tailwind()],
 });
 
