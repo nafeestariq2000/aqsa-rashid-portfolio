@@ -1,0 +1,27 @@
+# Aqsa Rashid - Google Certified Web UI/UX Designer & Webflow Developer
+
+> Aqsa Rashid is a Google Certified UI/UX Specialist and Webflow Developer based in Karachi, Pakistan. She specializes in crafting high-converting Web UI layouts in Figma (Auto-Layout 5.0), building custom, responsive Webflow websites with Client-First BEM architecture, and designing high-impact social media brand graphics.
+
+## Core Expertise & Services
+- **Web UI/UX Design**: Low & high-fidelity wireframes, Figma Auto-Layout 5.0 component systems, responsive desktop/mobile frames, interactive prototypes, and design tokens (WCAG 2.1 AA compliant).
+- **Figma to Webflow Development**: Pixel-perfect manual translations, Client-First class architecture, custom Webflow IX2 micro-interactions, CMS dynamic collections, and 100/100 Core Web Vitals optimization.
+- **Social Media & Brand Assets**: Multi-slide educational Instagram carousels (1080x1350), Meta & Google ad visual banners, brand visual templates, and billboard mockups.
+
+## Key Portfolio Projects & Case Studies
+- [AI SaaS Video Platform Landing Page](work/saas-video-landing-page/): High-converting SaaS UI with interactive Figma prototypes (+35% conversion intent, -42% mobile bounce rate).
+- [Solar & Clean Energy Website System](work/solar-energy-website/): End-to-end Figma to Webflow build featuring interactive ROI calculator (+210% consultations, 100/100 Web Vitals).
+- [Apex Fitness Club Social Media Campaign](work/fitness-social-media-branding/): High-contrast Instagram carousel series & ad creatives (+450% engagement, 50k+ impressions).
+
+## Credentials & Achievements
+- **Google UX Design Professional Specialization** (Google Coursera Recognized)
+- **Print & Digital Elements of Design Certification** (University of Colorado Boulder)
+- **Track Record**: 50+ completed international projects with 5.0 ★★★★★ client satisfaction rating.
+
+## Key Pages & Navigation
+- [Homepage](index.html): Hero overview, selected work gallery, core services overview, workflow steps, and client reviews.
+- [About Aqsa Rashid](about/): Background, credentials, design philosophy, and career milestones.
+- [Services Hub Overview](services/): Comprehensive service comparison matrix, turnaround times, and deliverables.
+- [Dedicated Contact Page](contact/): Direct contact form, verified email (hi.aqsarashid@gmail.com), and social media handles (LinkedIn, Behance).
+
+## Extended Documentation
+- [Full LLM Knowledge File](llms-full.txt): Complete detailed text transcript including full service specifications, workflow steps, client testimonials, and FAQs.

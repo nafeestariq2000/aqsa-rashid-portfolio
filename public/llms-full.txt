@@ -1,0 +1,92 @@
+# Aqsa Rashid - Complete Professional Profile & Service Documentation
+
+## About Aqsa Rashid
+Aqsa Rashid is a Google Certified Web UI/UX Designer and Webflow Developer based in Karachi, Pakistan (PKT / UTC+5). She works with SaaS founders, product teams, marketing agencies, and international brands across the USA, UK, Germany, UAE, and worldwide.
+
+### Academic & Professional Certifications
+1. **Google UX Design Professional Specialization** (Coursera / Google Recognized)
+   - User Research & Persona Mapping
+   - Low-to-High Fidelity Wireframing in Figma
+   - Interactive Prototyping & Usability Testing
+   - Accessibility Standards (WCAG 2.1 AA Contrast & Navigation)
+2. **Print & Digital Elements of Design** (University of Colorado Boulder)
+   - Typography Scale & Visual Hierarchy
+   - Color Theory & Brand Design Systems
+
+---
+
+## Services & Technical Offerings
+
+### Tier 1: User Experience & Web UI Design
+- **Toolchain**: Figma (Auto-Layout 5.0), Figma Tokens, Illustrator
+- **Core Deliverables**:
+  - Low & High-Fidelity Wireframes
+  - Responsive Desktop (1440px), Tablet (768px), and Mobile (375px) frames
+  - Design Tokens (Color Palette Variables, Typography Scales, Spacing Systems)
+  - Interactive Figma Prototypes with component variants
+- **Turnaround Time**: 1–2 Weeks
+- **Target Clients**: SaaS Founders, Product Managers, & Tech Startups
+
+### Tier 2: Figma to Webflow Development
+- **Toolchain**: Webflow, Client-First BEM Class Architecture, Custom HTML/CSS/JS, Webflow IX2
+- **Core Deliverables**:
+  - Manual, pixel-perfect Figma translation to Webflow
+  - Client-First naming methodology for easy client handoff
+  - Dynamic Webflow CMS Collections (Blog, Portfolio, Team)
+  - Custom IX2 micro-interactions & smooth page transitions
+  - On-page SEO & 100/100 Core Web Vitals optimization
+- **Turnaround Time**: 2–3 Weeks
+- **Target Clients**: Businesses Needing a Fast, Live, & Performant Website
+
+### Tier 3: Social Media Branding & Campaign Assets
+- **Toolchain**: Figma, Adobe Photoshop, Illustrator
+- **Core Deliverables**:
+  - Educational Instagram Multi-Slide Carousels (1080x1350px)
+  - High-Conversion Meta (Facebook/Instagram) & Google Display Ad Banners
+  - Outdoor Billboard & Print Event Campaign Mockups
+  - Brand Palette & Reusable Social Templates
+- **Turnaround Time**: 3–5 Days
+- **Target Clients**: E-Commerce Brands, Growth Marketers, & Agencies
+
+---
+
+## Selected Case Studies & Proven Results
+
+### 1. AI SaaS Video Platform Landing Page
+- **Role**: Lead UI/UX Designer
+- **Scope**: Complete Figma Web UI redesign, wireframing, and interactive prototype.
+- **Results**: +35% Conversion Intent, -42% Mobile Bounce Rate.
+
+### 2. Soller & Aetherfield Clean Energy Website
+- **Role**: UI/UX Designer & Webflow Developer
+- **Scope**: End-to-end Figma to Webflow build featuring custom interactive ROI energy calculator and CMS integration.
+- **Results**: +210% Consultation Bookings, 100/100 Google Core Web Vitals Score.
+
+### 3. Apex Fitness Club Social Media Campaign
+- **Role**: Visual Brand Designer
+- **Scope**: 5-slide educational Instagram carousels, ad visual banners, and print billboard graphics.
+- **Results**: +450% Social Engagement Growth, 50k+ Total Campaign Impressions.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+Q: How quickly do you reply to new project inquiries?
+A: Direct form submissions and emails sent to hi.aqsarashid@gmail.com are reviewed and answered within 24 hours (Monday through Saturday).
+
+Q: What deliverables do I receive upon project completion?
+A: For UI/UX design, you receive fully organized Figma files with Auto-Layout 5.0 components and design token specifications. For Webflow development, the site is transferred directly to your Webflow workspace with Client-First documentation.
+
+Q: How are payment milestones structured?
+A: Standard projects operate on a 50% deposit upfront to reserve bandwidth, with the remaining 50% due upon final approval prior to asset or site transfer.
+
+Q: Do you offer white-label design services for agencies?
+A: Yes, Aqsa regularly partners with design agencies, Webflow studios, and dev teams on white-label contracts.
+
+---
+
+## Contact Information & Social Channels
+- **Official Email**: hi.aqsarashid@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/hi-aqsarashid
+- **Behance**: https://www.behance.net/aqsarashid2
+- **Location**: Karachi, Pakistan (PKT / UTC+5)
