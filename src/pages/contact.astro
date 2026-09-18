@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import ContactHero from '../components/contact/ContactHero.astro';
 import ContactContent from '../components/contact/ContactContent.astro';
 import ContactFAQ from '../components/contact/ContactFAQ.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
 import Footer from '../components/Footer.astro';
 
 // SEO JSON-LD Breadcrumb Schema
@@ -40,6 +41,30 @@ const contactPageSchema = JSON.stringify({
     "jobTitle": "Google Certified Web UI/UX Designer & Webflow Developer"
   }
 });
+
+const relatedLinks = [
+  {
+    title: "Services Hub & Pricing Matrix",
+    subtitle: "Compare all 3 core service categories, deliverables, turnaround times, and pricing packages.",
+    url: `${import.meta.env.BASE_URL}services/`,
+    badge: "Services Hub",
+    icon: "🚀"
+  },
+  {
+    title: "About Aqsa Rashid",
+    subtitle: "Discover background credentials, Google UX certifications, design philosophy, and milestones.",
+    url: `${import.meta.env.BASE_URL}about/`,
+    badge: "About Profile",
+    icon: "🎓"
+  },
+  {
+    title: "Explore Selected Portfolio Work",
+    subtitle: "Browse real case studies for SaaS UI, Webflow development, and social branding campaigns.",
+    url: `${import.meta.env.BASE_URL}#work`,
+    badge: "Case Studies",
+    icon: "📁"
+  }
+];
 ---
 
 <Layout
@@ -62,6 +87,12 @@ const contactPageSchema = JSON.stringify({
 
     <!-- Section 3: Contact FAQ -->
     <ContactFAQ />
+
+    <!-- Section 4: Related Internal Links -->
+    <RelatedLinks
+      heading="Explore Services & Selected Work"
+      links={relatedLinks}
+    />
   </main>
 
   <!-- Footer -->

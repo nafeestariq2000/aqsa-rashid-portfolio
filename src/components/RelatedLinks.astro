@@ -1,0 +1,70 @@
+---
+interface RelatedLink {
+  title: string;
+  subtitle: string;
+  url: string;
+  badge: string;
+  icon: string;
+}
+
+interface Props {
+  heading?: string;
+  subheading?: string;
+  links: RelatedLink[];
+}
+
+const {
+  heading = "Explore Related Work & Specialized Services",
+  subheading = "Discover relevant case studies, complementary service offerings, and project capabilities.",
+  links = []
+} = Astro.props;
+---
+
+<section class="py-16 sm:py-20 bg-zinc-900/60 dark:bg-zinc-900/60 light:bg-zinc-100/60 border-t border-zinc-800/80 dark:border-zinc-800/80 light:border-zinc-200 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2 block">
+        NEXT STEPS & RELATED CONTENT
+      </span>
+      <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-3">
+        {heading}
+      </h2>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 font-normal">
+        {subheading}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {links.map((link) => (
+        <a
+          href={link.url}
+          class="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-lg hover:border-brand-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                {link.badge}
+              </span>
+              <span class="text-2xl">{link.icon}</span>
+            </div>
+
+            <h3 class="font-display text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-brand-500 transition-colors">
+              {link.title}
+            </h3>
+
+            <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-6">
+              {link.subtitle}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs font-bold text-brand-600 dark:text-brand-400 group-hover:underline">
+            <span>Explore Details</span>
+            <span class="group-hover:translate-x-1 transition-transform">↗</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</section>

@@ -13,7 +13,8 @@ const services = [
     ],
     tags: ["Figma", "Wireframing", "Prototyping", "Google UX"],
     icon: "🖥️",
-    accent: "from-brand-500/20 to-amber-500/10"
+    accent: "from-brand-500/20 to-amber-500/10",
+    link: `${import.meta.env.BASE_URL}services/figma-ui-ux-design/`
   },
   {
     id: "webflow",
@@ -28,7 +29,8 @@ const services = [
     ],
     tags: ["Webflow", "Client-First", "HTML5 / CSS", "SEO"],
     icon: "⚡",
-    accent: "from-blue-500/20 to-cyan-500/10"
+    accent: "from-blue-500/20 to-cyan-500/10",
+    link: `${import.meta.env.BASE_URL}services/figma-to-webflow/`
   },
   {
     id: "social-branding",
@@ -43,7 +45,8 @@ const services = [
     ],
     tags: ["Figma", "Photoshop", "Illustrator", "Canva"],
     icon: "📱",
-    accent: "from-purple-500/20 to-pink-500/10"
+    accent: "from-purple-500/20 to-pink-500/10",
+    link: `${import.meta.env.BASE_URL}services/social-media-design/`
   }
 ];
 ---
@@ -65,7 +68,7 @@ const services = [
     </div>
 
     <!-- Services Cards 3-Column Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
       {services.map((item) => (
         <div class="group relative flex flex-col justify-between p-8 rounded-3xl bg-zinc-900/90 dark:bg-zinc-900/90 light:bg-white border border-zinc-800/90 dark:border-zinc-800/90 light:border-zinc-200 hover:border-brand-500/40 shadow-xl hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1.5 transition-all duration-300">
           
@@ -116,16 +119,27 @@ const services = [
             </div>
 
             <a
-              href="#contact"
+              href={item.link}
               class="inline-flex items-center gap-2 text-sm font-bold text-brand-400 hover:text-brand-300 group-hover:translate-x-1 transition-all duration-300 pt-1"
             >
-              Get Started With {item.badge}
+              Explore {item.badge} Deep Dive
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </a>
           </div>
 
         </div>
       ))}
+    </div>
+
+    <!-- Hub Link Banner -->
+    <div class="text-center pt-4">
+      <a
+        href={`${import.meta.env.BASE_URL}services/`}
+        class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-zinc-900 dark:bg-zinc-900 border border-zinc-800 hover:border-brand-500/50 text-sm font-bold text-zinc-200 hover:text-brand-400 shadow-lg transition-all"
+      >
+        <span>🚀 View Services Hub & Comparison Matrix</span>
+        <span>↗</span>
+      </a>
     </div>
 
   </div>

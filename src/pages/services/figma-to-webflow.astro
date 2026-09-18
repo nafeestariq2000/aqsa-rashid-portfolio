@@ -6,6 +6,7 @@ import WebflowFeatures from '../../components/services/WebflowFeatures.astro';
 import WebflowWorkflow from '../../components/services/WebflowWorkflow.astro';
 import WebflowPricing from '../../components/services/WebflowPricing.astro';
 import WebflowFAQ from '../../components/services/WebflowFAQ.astro';
+import RelatedLinks from '../../components/RelatedLinks.astro';
 import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
 
@@ -33,6 +34,30 @@ const breadcrumbSchema = JSON.stringify({
     }
   ]
 });
+
+const relatedLinks = [
+  {
+    title: "Solar Energy Webflow System Case Study",
+    subtitle: "Discover how a Figma to Webflow build with custom ROI calculator drove +210% consultations.",
+    url: `${import.meta.env.BASE_URL}work/solar-energy-website/`,
+    badge: "Featured Webflow Case Study",
+    icon: "⚡"
+  },
+  {
+    title: "Figma Web UI/UX Design",
+    subtitle: "Need custom Figma wireframes & UI prototypes before Webflow development?",
+    url: `${import.meta.env.BASE_URL}services/figma-ui-ux-design/`,
+    badge: "Prerequisite Service",
+    icon: "❖"
+  },
+  {
+    title: "Services Overview Hub",
+    subtitle: "Compare all 3 core service offerings, deliverables, turnarounds, and pricing matrix.",
+    url: `${import.meta.env.BASE_URL}services/`,
+    badge: "Services Hub",
+    icon: "🚀"
+  }
+];
 ---
 
 <Layout
@@ -60,7 +85,13 @@ const breadcrumbSchema = JSON.stringify({
     <!-- Section 5: Webflow Service FAQ -->
     <WebflowFAQ />
 
-    <!-- Section 6: Direct Contact Form & Booking -->
+    <!-- Section 6: Related Internal Links -->
+    <RelatedLinks
+      heading="Related Webflow Work & Next Steps"
+      links={relatedLinks}
+    />
+
+    <!-- Section 7: Direct Contact Form & Booking -->
     <Contact />
   </main>
 

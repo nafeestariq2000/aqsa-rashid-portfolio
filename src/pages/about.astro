@@ -6,6 +6,7 @@ import AboutPhilosophy from '../components/about/AboutPhilosophy.astro';
 import AboutSkills from '../components/about/AboutSkills.astro';
 import AboutMilestones from '../components/about/AboutMilestones.astro';
 import Contact from '../components/Contact.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
 import Footer from '../components/Footer.astro';
 
 const breadcrumbSchema = JSON.stringify({
@@ -40,6 +41,30 @@ const profileSchema = JSON.stringify({
     "image": "https://aqsarashid.com/images/portfolio/cover-aetherfield.png"
   }
 });
+
+const relatedLinks = [
+  {
+    title: "Services Hub Overview",
+    subtitle: "Compare all 3 core service offerings, deliverables, turnarounds, and pricing matrix.",
+    url: `${import.meta.env.BASE_URL}services/`,
+    badge: "Services Hub",
+    icon: "🚀"
+  },
+  {
+    title: "SaaS Video Platform UI Case Study",
+    subtitle: "Discover how Google UX research & Figma design systems drove +35% higher conversions.",
+    url: `${import.meta.env.BASE_URL}work/saas-video-landing-page/`,
+    badge: "Featured UI Case Study",
+    icon: "📁"
+  },
+  {
+    title: "Solar Energy Webflow System",
+    subtitle: "Explore an end-to-end Figma to Webflow build featuring custom ROI energy calculator.",
+    url: `${import.meta.env.BASE_URL}work/solar-energy-website/`,
+    badge: "Featured Webflow Study",
+    icon: "⚡"
+  }
+];
 ---
 
 <Layout
@@ -65,7 +90,13 @@ const profileSchema = JSON.stringify({
     <!-- Section 4: Global Milestones & Client Track Record -->
     <AboutMilestones />
 
-    <!-- Section 5: Contact CTA -->
+    <!-- Section 5: Related Internal Links -->
+    <RelatedLinks
+      heading="Explore Portfolio Work & Services"
+      links={relatedLinks}
+    />
+
+    <!-- Section 6: Contact CTA -->
     <Contact />
   </main>
 
