@@ -1,6 +1,6 @@
 # Aqsa Rashid - Google Certified Web UI/UX Designer & Webflow Developer
 
-> Aqsa Rashid is a Google Certified UI/UX Specialist and Webflow Developer based in Karachi, Pakistan. She specializes in crafting high-converting Web UI layouts in Figma (Auto-Layout 5.0), building custom, responsive Webflow websites with Client-First BEM architecture, and designing high-impact social media brand graphics.
+> Aqsa Rashid is a Google Certified UI/UX Specialist and Webflow Developer. She specializes in crafting high-converting Web UI layouts in Figma (Auto-Layout 5.0), building custom, responsive Webflow websites with Client-First BEM architecture, and designing high-impact social media brand graphics.
 
 ## Core Expertise & Services
 - **Web UI/UX Design**: Low & high-fidelity wireframes, Figma Auto-Layout 5.0 component systems, responsive desktop/mobile frames, interactive prototypes, and design tokens (WCAG 2.1 AA compliant).

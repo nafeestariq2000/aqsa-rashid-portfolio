@@ -1,7 +1,7 @@
 # Aqsa Rashid - Complete Professional Profile & Service Documentation
 
 ## About Aqsa Rashid
-Aqsa Rashid is a Google Certified Web UI/UX Designer and Webflow Developer based in Karachi, Pakistan (PKT / UTC+5). She works with SaaS founders, product teams, marketing agencies, and international brands across the USA, UK, Germany, UAE, and worldwide.
+Aqsa Rashid is a Google Certified Web UI/UX Designer and Webflow Developer. She works with SaaS founders, product teams, marketing agencies, and international brands across the USA, UK, Germany, UAE, and worldwide.
 
 ### Academic & Professional Certifications
 1. **Google UX Design Professional Specialization** (Coursera / Google Recognized)
@@ -89,4 +89,4 @@ A: Yes, Aqsa regularly partners with design agencies, Webflow studios, and dev t
 - **Official Email**: hi.aqsarashid@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/hi-aqsarashid
 - **Behance**: https://www.behance.net/aqsarashid2
-- **Location**: Karachi, Pakistan (PKT / UTC+5)
+- **Location**: Pakistan (PKT / UTC+5)
