@@ -4,12 +4,20 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  ogType?: string;
 }
 
 const {
   title = "Aqsa Rashid | Google Certified UI/UX Designer & Webflow Developer",
-  description = "Google UX certified Web UI/UX designer & Figma specialist. Crafting clean, high-converting landing pages, Webflow sites, & social media graphics. Hire today!"
+  description = "Google UX certified Web UI/UX designer & Figma specialist. Crafting clean, high-converting landing pages, Webflow sites, & social media graphics. Hire today!",
+  image = `${import.meta.env.BASE_URL}images/portfolio/cover-aetherfield.png`,
+  ogType = "website"
 } = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://nafeestariq2000.github.io';
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://nafeestariq2000.github.io').href;
+const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : '/' + image}`;
 
 const personSchema = JSON.stringify({
   "@context": "https://schema.org",
@@ -19,7 +27,7 @@ const personSchema = JSON.stringify({
   "email": "mailto:hi.aqsarashid@gmail.com",
   "telephone": "+923323773369",
   "url": "https://aqsarashid.com",
-  "image": "https://aqsarashid.com/images/portfolio/cover-aetherfield.png",
+  "image": imageUrl,
   "sameAs": [
     "https://www.linkedin.com/in/hi-aqsarashid",
     "https://www.behance.net/aqsarashid2"
@@ -69,9 +77,13 @@ const serviceSchema = JSON.stringify({
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content="Aqsa Rashid" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
 
     <!-- Google Fonts -->
@@ -79,11 +91,23 @@ const serviceSchema = JSON.stringify({
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <!-- Open Graph / Social Cards -->
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Aqsa Rashid — Web UI/UX Designer & Webflow Developer" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content={`${import.meta.env.BASE_URL}images/portfolio/cover-aetherfield.png`} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={title} />
 
     <!-- Schema Markup -->
     <script type="application/ld+json" set:html={personSchema}></script>
