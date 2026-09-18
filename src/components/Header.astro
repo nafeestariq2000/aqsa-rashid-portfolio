@@ -96,7 +96,7 @@ const workDropdown = [
         </a>
 
         <!-- Services Dropdown Card -->
-        <div class="absolute top-full left-0 w-80 p-3 rounded-2xl bg-white/95 dark:bg-zinc-900/95 border border-zinc-200/80 dark:border-zinc-800 shadow-2xl backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50">
+        <div class="absolute top-full left-0 w-80 p-3 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-2xl shadow-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50">
           <div class="space-y-1">
             {servicesDropdown.map((item) => (
               <a
@@ -133,7 +133,7 @@ const workDropdown = [
         </a>
 
         <!-- Work Dropdown Card -->
-        <div class="absolute top-full left-0 w-80 p-3 rounded-2xl bg-white/95 dark:bg-zinc-900/95 border border-zinc-200/80 dark:border-zinc-800 shadow-2xl backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50">
+        <div class="absolute top-full left-0 w-80 p-3 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-2xl shadow-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50">
           <div class="space-y-1">
             {workDropdown.map((item) => (
               <a
@@ -190,9 +190,12 @@ const workDropdown = [
       <!-- Action CTA Button -->
       <a
         href={`${import.meta.env.BASE_URL}contact/`}
-        class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+        class="hidden sm:inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
       >
-        Book a Call ↗
+        <span>Book a Call</span>
+        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
       </a>
 
       <!-- Mobile Hamburger Menu Button -->
@@ -241,8 +244,11 @@ const workDropdown = [
     </div>
 
     <div class="pt-2 border-t border-zinc-800/60 flex flex-col gap-3">
-      <a href={`${import.meta.env.BASE_URL}contact/`} class="w-full py-3 rounded-xl text-xs font-bold text-center text-white bg-brand-500">
-        Book a Scope Call ↗
+      <a href={`${import.meta.env.BASE_URL}contact/`} class="w-full py-3 rounded-xl text-xs font-bold text-center text-white bg-brand-500 flex items-center justify-center gap-1.5 group">
+        <span>Book a Scope Call</span>
+        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
       </a>
     </div>
 

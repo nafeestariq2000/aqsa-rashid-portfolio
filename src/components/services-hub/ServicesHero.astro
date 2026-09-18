@@ -154,9 +154,12 @@
             </div>
             <a
               href={`${import.meta.env.BASE_URL}contact/`}
-              class="text-xs font-extrabold text-brand-600 dark:text-brand-400 hover:underline"
+              class="text-xs font-extrabold text-brand-600 dark:text-brand-400 hover:text-brand-500 inline-flex items-center gap-1 group"
             >
-              Book a Scope Call ↗
+              <span>Book a Scope Call</span>
+              <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"></path>
+              </svg>
             </a>
           </div>
 

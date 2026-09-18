@@ -161,9 +161,12 @@ const socials = [
       <!-- Back To Top Button -->
       <a
         href="#"
-        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-zinc-300 dark:text-zinc-300 light:text-zinc-700 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 hover:border-brand-500 hover:text-brand-400 transition-all duration-300"
+        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-zinc-300 dark:text-zinc-300 light:text-zinc-700 bg-zinc-900 dark:bg-zinc-900 light:bg-white border border-zinc-800 dark:border-zinc-800 light:border-zinc-300 hover:border-brand-500 hover:text-brand-400 transition-all duration-300 group"
       >
-        Back to Top ↑
+        <span>Back to Top</span>
+        <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0l-7 7m7-7l7 7"></path>
+        </svg>
       </a>
     </div>
 
